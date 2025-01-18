@@ -4,6 +4,7 @@ import { GoogleLogin, googleLogout } from "@react-oauth/google";
 import "../../utilities.css";
 import "./Skeleton.css";
 import { UserContext } from "../App";
+import Search from "./Search.jsx";
 
 const Skeleton = () => {
   const { userId, handleLogin, handleLogout } = useContext(UserContext);
@@ -25,7 +26,7 @@ const Skeleton = () => {
       <h2> What you need to change in this skeleton</h2>
       <ul>
         <li>
-          Change the Frontend CLIENT_ID (index.jsx) to your team's CLIENT_ID (obtain this at
+          Change the Frontend ababababa (index.jsx) to your team's CLIENT_ID (obtain this at
           http://weblab.is/clientid)
         </li>
         <li>Change the Server CLIENT_ID to the same CLIENT_ID (auth.js)</li>
@@ -39,6 +40,7 @@ const Skeleton = () => {
       <a href="https://docs.google.com/document/d/110JdHAn3Wnp3_AyQLkqH2W8h5oby7OVsYIeHYSiUzRs/edit?usp=sharing">
         Check out this getting started guide
       </a>
+      <Search />
     </>
   );
 };

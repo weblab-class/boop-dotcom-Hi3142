@@ -1,0 +1,15 @@
+.menuItemWrap {
+  display: flex;
+}
+
+.left-aligned {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.right-aligned {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
