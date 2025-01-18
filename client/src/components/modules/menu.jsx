@@ -9,23 +9,16 @@ import "./menu.css";
 
 const Menu = (props) => {
   return (
-    <div>
-      {props.menuitems.map((menuitem) => (
-        <MenuItemDisplay
-          key={"MenuItem_${menuitem._id}"}
-          _id={menuitem._id}
-          avg_rating={menuitem.avg_rating}
-          num_ratings={menuitem.num_ratings}
-          hot_upvotes={menuitem.hot_upvotes}
-          dietary_tags={menuitem.dietary_tags}
-          reviews={menuitem.reviews}
-          name={menuitem.name}
-          location={menuitem.location}
-          station={menuitem.station}
-        />
-        //eventually we will fetch updated infor here
-      ))}
-    </div>
+    <section className="menuWrapper">
+      <p className="menuTitle">MENU WRAPPER</p>
+      <div className="itemArray">
+        {" "}
+        {props.itemlist.map((menuitem) => (
+          <MenuItemDisplay item={menuitem} key={`item_${menuitem._id}`} />
+          //eventually we will fetch updated infor here
+        ))}{" "}
+      </div>
+    </section>
   );
 };
 

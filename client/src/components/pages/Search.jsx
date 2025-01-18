@@ -1,10 +1,15 @@
-import React, { useState, useEffect } from "react";
-import { useOutletContext } from "react-router-dom";
+import React, { useContext } from "react";
+import { GoogleLogin, googleLogout } from "@react-oauth/google";
 
-import { get } from "../../utilities";
+import "../../utilities.css";
+import { UserContext } from "../App";
+import MenuItemDisplay from "../modules/menuitemdisplay.jsx";
+import Menu from "../modules/menu.jsx";
+import "./Search.css";
 
 const Search = () => {
-  myitem1 = {
+  const { userId, handleLogin, handleLogout } = useContext(UserContext);
+  const myitem1 = {
     name: "myitem1",
     location: "Next",
     station: "action",
@@ -13,11 +18,39 @@ const Search = () => {
     hot_upvotes: 1,
     dietary_tags: ["Kosher", "Gluten free"],
     reviews: [],
+    _id: "hello",
   };
+
+  const myitem2 = {
+    name: "myitem2",
+    location: "Baker",
+    station: "dessert",
+    avg_rating: 2.3,
+    num_ratings: 3,
+    hot_upvotes: 0,
+    dietary_tags: ["Kosher"],
+    reviews: [],
+    _id: "hi",
+  };
+
+  const itemlist = [myitem1, myitem2];
+
   return (
     <>
-      <h1>Search page</h1>
-      <Menu menuitem={[myitem1]} />
+      {userId ? (
+        <button
+          onClick={() => {
+            googleLogout();
+            handleLogout();
+          }}
+        >
+          Logout
+        </button>
+      ) : (
+        <GoogleLogin onSuccess={handleLogin} onError={(err) => console.log(err)} />
+      )}
+      <div>I AM A SEARCH WRAPPER</div>
+      <Menu itemlist={itemlist} />
     </>
   );
 };

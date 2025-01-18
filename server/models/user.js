@@ -1,11 +1,10 @@
 const mongoose = require("mongoose");
-const MenuItem = require("./menuitem.js");
 
 const UserSchema = new mongoose.Schema({
   name: String,
   googleid: String,
   dietary_tags: [String],
-  favorites: [MenuItem],
+  favorites: [String], //foodItemIds
 });
 
 // compile model from schema

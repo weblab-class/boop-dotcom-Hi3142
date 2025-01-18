@@ -1,0 +1,13 @@
+section {
+  background-color: rgb(29, 29, 29);
+  color: white;
+}
+
+.menuTitle {
+  font-size: 60px;
+}
+
+.itemArray {
+  display: grid;
+  row-gap: 15px;
+}
