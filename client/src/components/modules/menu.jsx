@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import MenuItemDisplay from "./menuitemdisplay";
+import ItemBlock from "./itemblock";
 import { get } from "../../utilities";
 
 import "./menu.css";
@@ -14,7 +15,7 @@ const Menu = (props) => {
       <div className="itemArray">
         {" "}
         {props.itemlist.map((menuitem) => (
-          <MenuItemDisplay item={menuitem} key={`item_${menuitem._id}`} />
+          <ItemBlock menuitem={menuitem} key={`item_${menuitem._id}`} />
           //eventually we will fetch updated infor here
         ))}{" "}
       </div>

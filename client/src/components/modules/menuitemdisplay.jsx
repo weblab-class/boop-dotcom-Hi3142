@@ -19,14 +19,14 @@ const MenuItemDisplay = (props) => {
     <div>
       <div className="menuItemWrap">
         <div className="left-aligned">
-          <p className="itemName">{props.item.name}</p>
+          <p className="itemName">{props.menuitem.name}</p>
           <p>
-            | {props.item.location} @ {props.item.station}
+            | {props.menuitem.location} @ {props.menuitem.station}
           </p>
         </div>
         <div className="right-aligned">
-          <p>Rating: {props.item.avg_rating}</p>
-          <p>Hot: {props.item.hot_upvotes}</p>
+          <p>Rating: {props.menuitem.avg_rating}</p>
+          <p>Hot: {props.menuitem.hot_upvotes}</p>
         </div>
       </div>
     </div>

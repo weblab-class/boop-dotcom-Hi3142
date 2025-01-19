@@ -43,6 +43,17 @@ router.post("/initsocket", (req, res) => {
 // | write your API methods below!|
 // |------------------------------|
 
+router.get("/reviews", (req, res) => {
+  res.send(reviews.filter((review) => review.parent_item === req.query.parent_item));
+});
+t;
+
+router.post("/review", (req, res) => {
+  const newReview = req.body;
+  reviews.push(newReview);
+  res.send(newReview);
+});
+
 // anything else falls to this "not found" case
 router.all("*", (req, res) => {
   console.log(`API route not found: ${req.method} ${req.url}`);

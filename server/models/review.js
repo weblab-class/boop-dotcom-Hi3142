@@ -4,10 +4,10 @@ const mongoose = require("mongoose");
 const ReviewSchema = new mongoose.Schema({
   poster_id: String, //links to ID of user who posted it
   poster_name: String,
-  parentItem: String, //links to ID of the menu item
+  parent_item: String, //links to ID of the menu item
   rating: Number,
   timestamp: { type: Date, default: Date.now },
-  reviewtext: String,
+  review_text: String,
 });
 
 // compile model from schema
