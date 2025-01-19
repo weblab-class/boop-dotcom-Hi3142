@@ -24,14 +24,14 @@ const socketManager = require("./server-socket");
 
 router.post("/login", auth.login);
 router.post("/logout", auth.logout);
-/*router.get("/whoami", (req, res) => {
+router.get("/whoami", (req, res) => {
   if (!req.user) {
     // not logged in
     return res.send({});
   }
 
   res.send(req.user);
-});*/
+});
 
 router.post("/initsocket", (req, res) => {
   // do nothing if user not logged in
@@ -43,32 +43,6 @@ router.post("/initsocket", (req, res) => {
 // |------------------------------|
 // | write your API methods below!|
 // |------------------------------|
-const myReview1 = {
-  poster_id: "leens", //links to ID of user who posted it
-  poster_name: "leensie",
-  parent_item: "hello", //links to ID of the menu item
-  rating: 2.1,
-  timestamp: Date.now(),
-  review_text: "this is review 1",
-};
-
-const myReview2 = {
-  poster_id: "leens", //links to ID of user who posted it
-  poster_name: "leensie",
-  parent_item: "hi", //links to ID of the menu item
-  rating: 4.2,
-  timestamp: Date.now(),
-  review_text: "this is review 2",
-};
-const myReview3 = {
-  poster_id: "leens", //links to ID of user who posted it
-  poster_name: "leensie",
-  parent_item: "hi", //links to ID of the menu item
-  rating: 5,
-  timestamp: Date.now(),
-  review_text: "this is review 3",
-};
-const reviews = [myReview1, myReview2, myReview3];
 
 router.get("/reviews", (req, res) => {
   Review.find({ parent_item: req.query.parent_item }).then((reviews) => res.send(reviews));
@@ -76,12 +50,13 @@ router.get("/reviews", (req, res) => {
 
 router.post("/review", (req, res) => {
   const newReview = new Review({
-    poster_name: "leensie",
+    poster_name: req.body.poster_name,
     parent_item: req.body.parent_item,
     review_text: req.body.review_text,
+    rating: req.body.rating,
+    timestamp: req.body.timestamp,
   });
-  //newReview.save().then((rev) => res.send(rev));
-  res.send(newReview);
+  newReview.save().then((rev) => res.send(rev));
 });
 
 // anything else falls to this "not found" case

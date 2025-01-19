@@ -17,18 +17,17 @@ const NewReview = (props) => {
   };
 
   const addNewReview = (value) => {
-    let id = "id" + Math.random().toString(16).slice(2);
     const review = {
       review_text: value,
       poster_name: "Anonymous User",
-      _id: id,
-      parent_item: "hi",
+      parent_item: props.parent_item,
+      timestamp: Date.now(),
       rating: 5,
     };
 
     post("/api/review", review).then((reviewObj) => {
-      addNewReview(reviewObj);
-      console.log(reviewObj.review_text);
+      props.reviewUpdater(reviewObj);
+      console.log(reviewObj.review_text, reviewObj.parent_item);
     });
   };
 

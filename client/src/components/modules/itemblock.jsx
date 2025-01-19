@@ -17,8 +17,11 @@ const ItemBlock = (props) => {
     get("/api/reviews", { parent_item: props.menuitem._id }).then((returnedReviews) => {
       setReviews(returnedReviews);
     });
-    /*get("/api/reviews", { myparam: "hi" }).then((returned) => console.log(returned));*/
-  }, []);
+  }, [reviews]);
+
+  const reviewUpdater = (reviewObj) => {
+    setReviews(reviews.concat([reviewObj]));
+  };
 
   return (
     <div>
@@ -26,6 +29,7 @@ const ItemBlock = (props) => {
       <ReviewBlock
         menuitem={props.menuitem}
         reviews={reviews.filter((review) => review.parent_item === props.menuitem._id)}
+        reviewUpdater={reviewUpdater}
       />
     </div>
   );

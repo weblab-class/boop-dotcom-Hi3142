@@ -8,26 +8,9 @@ const ReviewBlock = (props) => {
       {props.reviews.map((review) => (
         <Review reviewobj={review} key={`review_${review._id}`} />
       ))}
-      <NewReview parent_item={props.menuitem._id} />
+      <NewReview parent_item={props.menuitem._id} reviewUpdater={props.reviewUpdater} />
     </div>
   );
 };
-/*return (
-    <div>
-      <div>
-        {props.reviews.map((review) => (
-          <Review
-            key={`Review_${review._id}`}
-            _id={review._id}
-            poster_name={review.poster_name}
-            review_text={review.review_text}
-            rating={review.rating}
-          />
-        ))}
-        <NewReview parent_item={props.menuitem._id} addNewReview={props.addNewReview} />
-      </div>
-    </div>
-  ); 
-};*/
 
 export default ReviewBlock;

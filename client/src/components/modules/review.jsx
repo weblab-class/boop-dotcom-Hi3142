@@ -16,9 +16,7 @@ const Review = (props) => {
       </div>
       <hr />
       <p>{props.reviewobj.review_text}</p>
-      <p>
-        {props.reviewobj.parent_item} and {props.key}
-      </p>
+      <p>{props.reviewobj.parent_item}</p>
     </div>
   );
 };
