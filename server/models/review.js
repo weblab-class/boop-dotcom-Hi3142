@@ -8,6 +8,7 @@ const ReviewSchema = new mongoose.Schema({
   rating: Number,
   timestamp: { type: Date, default: Date.now },
   review_text: String,
+  _id: String,
 });
 
 // compile model from schema

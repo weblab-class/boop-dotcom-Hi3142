@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import MenuItemDisplay from "./menuitemdisplay";
 import ItemBlock from "./itemblock";
 import { get } from "../../utilities";
 

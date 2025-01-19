@@ -1,8 +1,12 @@
 .reviewWrap {
   display: flex;
-  border-style: solid;
   border-color: rgb(72, 247, 145);
   justify-content: space-between;
+}
+
+.reviewWrap1 {
+  border-style: solid;
+  border-color: rgb(72, 247, 145);
   margin: 5px 20px;
   padding: 0px 10px;
 }

@@ -8,6 +8,7 @@ import "../utilities.css";
 import { socket } from "../client-socket";
 
 import { get, post } from "../utilities";
+import { NewReview } from "./modules/newreview";
 
 export const UserContext = createContext(null);
 
@@ -17,14 +18,14 @@ export const UserContext = createContext(null);
 const App = () => {
   const [userId, setUserId] = useState(undefined);
 
-  useEffect(() => {
+  /*useEffect(() => {
     get("/api/whoami").then((user) => {
       if (user._id) {
         // they are registed in the database, and currently logged in.
         setUserId(user._id);
       }
     });
-  }, []);
+  }, []);*/
 
   const handleLogin = (credentialResponse) => {
     const userToken = credentialResponse.credential;
@@ -50,6 +51,7 @@ const App = () => {
   return (
     <UserContext.Provider value={authContextValue}>
       <Outlet />
+      <NewReview />
     </UserContext.Provider>
   );
 };
