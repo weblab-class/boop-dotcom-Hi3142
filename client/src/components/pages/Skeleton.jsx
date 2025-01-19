@@ -29,7 +29,7 @@ const Skeleton = () => {
       <h2> What you need to change in this skeleton</h2>
       <ul>
         <li>
-          Change the Frontend ababababa (index.jsx) to your team's CLIENT_ID (obtain this at
+          Change the Frontend CLIENT_ID (index.jsx) to your team's CLIENT_ID (obtain this at
           http://weblab.is/clientid)
         </li>
         <li>Change the Server CLIENT_ID to the same CLIENT_ID (auth.js)</li>
