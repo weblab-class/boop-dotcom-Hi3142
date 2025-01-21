@@ -5,8 +5,6 @@ import { useParams } from "react-router-dom";
 
 import "../../utilities.css";
 import { UserContext } from "../App";
-import MenuItemDisplay from "../modules/menuitemdisplay.jsx";
-import Menu from "../modules/menu.jsx";
 import "./Search.css";
 
 const Profile = () => {
@@ -18,27 +16,21 @@ const Profile = () => {
 
   useEffect(() => {
     document.title = "Profile Page";
+    console.log("fetch");
     get(`/api/profile`, { userId: userId }).then((userObj) => {
       setUser(userObj);
+      console.log("fetch");
+      console.log(userObj);
     });
   }, []);
 
+  if (!user) {
+    return <div> Loading!</div>;
+  }
   return (
     <>
-      {userId ? (
-        <button
-          onClick={() => {
-            googleLogout();
-            handleLogout();
-          }}
-        >
-          Logout
-        </button>
-      ) : (
-        <GoogleLogin onSuccess={handleLogin} onError={(err) => console.log(err)} />
-      )}
       <div>
-        <h1>Hello, {user.name} !</h1>
+        <h1>Hello, {user.name}!</h1>
       </div>
     </>
   );
