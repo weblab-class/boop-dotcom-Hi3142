@@ -22,7 +22,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route errorElement={<NotFound />} element={<App />}>
       <Route path="/" element={<Skeleton />} />
-      <Route path="/search" element={<Search />} />
+      <Route path="/search/" element={<Search />} />
     </Route>
   )
 );

@@ -33,7 +33,23 @@ const Search = () => {
     _id: "hi",
   };
 
+  const myrequirements = {
+    halls: ["Baker", "McCormick"],
+    dietary_tags: ["Kosher"],
+  };
+
   const itemlist = [myitem1, myitem2];
+
+  const Satisfies = (item, requirements) => {
+    if (requirements.halls.includes(item.location)) {
+      return requirements.dietary_tags.every((tag) => item.dietary_tags.includes(tag));
+    } else {
+      console.log("weewoo");
+      return false;
+    }
+  };
+
+  const newitemlist = itemlist.filter((item) => Satisfies(item, myrequirements));
 
   return (
     <>
@@ -50,7 +66,7 @@ const Search = () => {
         <GoogleLogin onSuccess={handleLogin} onError={(err) => console.log(err)} />
       )}
       <div>I AM A SEARCH WRAPPER</div>
-      <Menu itemlist={itemlist} />
+      <Menu itemlist={newitemlist} />
     </>
   );
 };
