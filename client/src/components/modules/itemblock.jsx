@@ -17,7 +17,7 @@ const ItemBlock = (props) => {
     get("/api/reviews", { parent_item: props.menuitem._id }).then((returnedReviews) => {
       setReviews(returnedReviews);
     });
-  }, [reviews]);
+  }, []);
 
   const reviewUpdater = (reviewObj) => {
     setReviews(reviews.concat([reviewObj]));

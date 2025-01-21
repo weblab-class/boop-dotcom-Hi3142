@@ -28,6 +28,17 @@ const App = () => {
     });
   }, []);
 
+  useEffect(() => {
+    //on first render
+    //fetch all today's items from dining api; put (name, location, station)
+    //into an array
+    //for every item returned, find the corresponding ._id in the mongodb
+    //if there is no such item, make it & put it in the mongodb
+    fetch("m.mit.edu/apis/dining/venues/house/maseeh/").then((returned) => {
+      console.log(returned);
+    });
+  }, []);
+
   const handleLogin = (credentialResponse) => {
     const userToken = credentialResponse.credential;
     const decodedCredential = jwt_decode(userToken);

@@ -8,7 +8,7 @@ const MenuItemSchema = new mongoose.Schema({
   num_ratings: Number,
   hot_upvotes: Number,
   dietary_tags: [String],
-  _id: String,
+  meal: String,
 });
 
 // compile model from schema
