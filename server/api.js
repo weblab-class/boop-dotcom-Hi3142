@@ -59,6 +59,16 @@ router.post("/review", (req, res) => {
   newReview.save().then((rev) => res.send(rev));
 });
 
+router.get(`/profile`, (req, res) => {
+  User.findById(req.query.userId)
+    .then((returnedUser) => {
+      res.send(returnedUser);
+    })
+    .catch((err) => {
+      res.status(500).send("User Not");
+    });
+});
+
 // anything else falls to this "not found" case
 router.all("*", (req, res) => {
   console.log(`API route not found: ${req.method} ${req.url}`);

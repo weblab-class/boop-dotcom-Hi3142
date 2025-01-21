@@ -18,6 +18,9 @@ const NavBar = (props) => {
         <Link to="/search/" className="NavBar-link u-inlineBlock">
           Search
         </Link>
+        <Link to="/profile/" className="NavBar-link u-inlineBlock">
+          Profile
+        </Link>
       </div>
       <div className="u-alignRight u-inlineBlock">
         {props.userId ? (
