@@ -34,8 +34,8 @@ const App = () => {
     //into an array
     //for every item returned, find the corresponding ._id in the mongodb
     //if there is no such item, make it & put it in the mongodb
-    fetch("m.mit.edu/apis/dining/venues/house/maseeh/").then((returned) => {
-      console.log(returned);
+    fetch("http://m.mit.edu/apis/dining/venues/house").then((data) => {
+      console.log(data);
     });
   }, []);
 
