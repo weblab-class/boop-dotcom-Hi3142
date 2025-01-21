@@ -18,7 +18,7 @@ const NavBar = (props) => {
         <Link to="/search/" className="NavBar-link u-inlineBlock">
           Search
         </Link>
-        <Link to="/profile/" className="NavBar-link u-inlineBlock">
+        <Link to={`/profile/${props.userId}`} className="NavBar-link u-inlineBlock">
           Profile
         </Link>
       </div>

@@ -18,6 +18,7 @@ const Profile = () => {
     document.title = "Profile Page";
     console.log("fetch");
     get(`/api/profile`, { userId: userId }).then((userObj) => {
+      console.log(userId);
       setUser(userObj);
       console.log("fetch");
       console.log(userObj);
@@ -31,6 +32,8 @@ const Profile = () => {
     <>
       <div>
         <h1>Hello, {user.name}!</h1>
+        <p>Manage your dietary tags</p>
+        <p>Manage favorites</p>
       </div>
     </>
   );
