@@ -1,0 +1,23 @@
+.submitButton {
+  color: white;
+  border: var(--primary) 1px solid;
+  border-radius: 0 var(--xs) var(--xs) 0;
+  background-color: black;
+  transition: color 0.1s, background 0.1s;
+}
+
+.reviewInput {
+  flex-grow: 1;
+  border: var(--darkgrey) 1px solid;
+  border-radius: var(--xs) 0 0 var(--xs);
+  transition: box-shadow 0.1s;
+  background-color: rgba(0, 0, 0, 0.37);
+  color: white;
+  width: 300px;
+}
+
+.reviewInputWrapper {
+  padding: 5px;
+  font-size: medium;
+  color: white;
+}

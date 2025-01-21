@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { post } from "../../utilities";
+import "./newreview.css";
 
 const NewReview = (props) => {
   const [value, setValue] = useState("");
@@ -32,9 +33,15 @@ const NewReview = (props) => {
   };
 
   return (
-    <div>
-      <input type="text" placeholder="Add your review" value={value} onChange={handleChange} />
-      <button type="submit" value="Submit" onClick={handleSubmit}>
+    <div className="reviewInputWrapper">
+      <input
+        type="text"
+        placeholder="Add your review"
+        value={value}
+        onChange={handleChange}
+        className="reviewInput"
+      />
+      <button type="submit" value="Submit" onClick={handleSubmit} className="submitButton u-bold">
         Submit
       </button>
     </div>

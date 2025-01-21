@@ -1,10 +1,11 @@
 import React from "react";
 import Review from "./review.jsx";
 import { NewReview } from "./newreview.jsx";
+import "./reviewblock.css";
 
 const ReviewBlock = (props) => {
   return (
-    <div>
+    <div className="reviewBlockWrapper">
       {props.reviews.map((review) => (
         <Review reviewobj={review} key={`review_${review._id}`} />
       ))}
