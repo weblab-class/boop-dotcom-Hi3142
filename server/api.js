@@ -69,6 +69,36 @@ router.get(`/profile`, (req, res) => {
     });
 });
 
+/*
+import data from "../../dining.json";
+console.log(data);
+let mealsList = data[5].meals_by_day[0].meals;
+mealsList.forEach((element) => {
+  let newList = element.items;
+  newList.forEach((newEle) => {
+    MenuItem.find({ name: newEle.name, location: "Maseeh" }).then((foundItems) => {
+      if (foundItems == null) {
+        const newItem = new MenuItem({
+          name: newEle.name,
+          location: "Maseeh",
+          station: newEle.station,
+          dietary_tags: newEle.dietary_flags,
+        });
+        newItem.save();
+      }
+      foundItems.forEach((item) => {
+        setTodayItems([...todayItems, item._id]);
+      });
+    });
+  });*/
+//let newList = element.items;
+//newList.forEact((newEle) => {
+//console.log(newEle);
+//});
+//});
+
+//const MenuItem = require("./models/menuitem.js");
+
 // anything else falls to this "not found" case
 router.all("*", (req, res) => {
   console.log(`API route not found: ${req.method} ${req.url}`);

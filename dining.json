@@ -1,0 +1,2363 @@
+[
+  {
+    "id": "402",
+    "url": "http://m.mit.edu/apis/dining/venues/house/402",
+    "name": "Simmons",
+    "short_name": "Simmons",
+    "location": {
+      "longitude": "-71.10246",
+      "latitude": "42.35643",
+      "description": "W79",
+      "street": "229 Vassar Street"
+    },
+    "payment": ["Meal plan", "Cash", "TechCASH"],
+    "meals_by_day": [{ "date": "01/21/2025", "meals": [] }]
+  },
+  {
+    "id": "2362",
+    "url": "http://m.mit.edu/apis/dining/venues/house/2362",
+    "name": "New Vassar",
+    "short_name": "New Vassar",
+    "location": {
+      "longitude": "0.00000",
+      "latitude": "0.00000",
+      "description": "W46",
+      "street": "189 Vassar Street"
+    },
+    "payment": ["Meal plan", "Cash", "TechCASH"],
+    "meals_by_day": [{ "date": "01/21/2025", "meals": [] }]
+  },
+  {
+    "id": "401",
+    "url": "http://m.mit.edu/apis/dining/venues/house/401",
+    "name": "Next",
+    "short_name": "Next",
+    "location": {
+      "longitude": "-71.10326",
+      "latitude": "42.36476",
+      "description": "W71",
+      "street": "500 Memorial Drive"
+    },
+    "payment": ["Meal plan", "Cash", "TechCASH"],
+    "meals_by_day": [{ "date": "01/21/2025", "meals": [] }]
+  },
+  {
+    "id": "400",
+    "url": "http://m.mit.edu/apis/dining/venues/house/400",
+    "name": "McCormick",
+    "short_name": "McCormick",
+    "location": {
+      "longitude": "-71.10326",
+      "latitude": "42.36476",
+      "description": "W4",
+      "street": "320 Memorial Drive"
+    },
+    "payment": ["Meal plan", "Cash", "TechCASH"],
+    "meals_by_day": [{ "date": "01/21/2025", "meals": [] }]
+  },
+  {
+    "id": "399",
+    "url": "http://m.mit.edu/apis/dining/venues/house/399",
+    "name": "Baker",
+    "short_name": "Baker",
+    "location": {
+      "longitude": "-71.10326",
+      "latitude": "42.36476",
+      "description": "W7",
+      "street": "362 Memorial Drive"
+    },
+    "payment": ["Meal plan", "Cash", "TechCASH"],
+    "meals_by_day": [{ "date": "01/21/2025", "meals": [] }]
+  },
+  {
+    "id": "398",
+    "url": "http://m.mit.edu/apis/dining/venues/house/398",
+    "name": "Maseeh",
+    "short_name": "Maseeh",
+    "location": {
+      "longitude": "-71.10326",
+      "latitude": "42.36476",
+      "description": "W1",
+      "street": "305 Memorial Drive"
+    },
+    "payment": ["Meal plan", "Cash", "TechCASH"],
+    "meals_by_day": [
+      {
+        "date": "01/21/2025",
+        "meals": [
+          {
+            "name": "Breakfast",
+            "start_time": "08:00",
+            "end_time": "11:00",
+            "items": [
+              {
+                "name": "hot sauce",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "hot sauce",
+                "dietary_flags": [],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "worcestershire sauce",
+                "dietary_flags": ["Fish", "Soy"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "hot sauce",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "mustard",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "dijon mustard",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "mustard",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "pickle relish",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "peanut butter",
+                "dietary_flags": ["Vegan", "Peanut"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "cream cheese",
+                "dietary_flags": ["Milk"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "ketchup",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "strawberry jelly preserves",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "grape jelly",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "mayonnaise",
+                "dietary_flags": ["Vegetarian", "Egg"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "butter",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "gatorade fruit punch",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "mountain dew",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "mug root beer",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "crush orange",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "pepsi",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "tropicana lemonade",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "diet pepsi",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "cranberry juice",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "orange juice",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "apple juice",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "guava juice",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "oat milk",
+                "dietary_flags": ["Vegan", "Wheat/Gluten"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "soy milk",
+                "dietary_flags": ["Vegan", "Soy"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "milk",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "milk",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "half and half",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "chocolate milk",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "coffee",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "decaf coffee",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "tea",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "cocoa powder",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "sugar",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "honey",
+                "dietary_flags": ["Vegetarian"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "dried cranberry",
+                "dietary_flags": ["Vegan"],
+                "station": "toppings",
+                "description": ""
+              },
+              {
+                "name": "raisins",
+                "dietary_flags": ["Vegan"],
+                "station": "toppings",
+                "description": ""
+              },
+              {
+                "name": "saltine crackers",
+                "dietary_flags": ["Vegan", "Wheat/Gluten", "Soy"],
+                "station": "toppings",
+                "description": ""
+              },
+              {
+                "name": "crouton",
+                "dietary_flags": ["Vegan", "Sesame", "Wheat/Gluten"],
+                "station": "toppings",
+                "description": ""
+              },
+              {
+                "name": "oyster cracker",
+                "dietary_flags": ["Vegetarian", "Wheat/Gluten", "Milk", "Soy"],
+                "station": "toppings",
+                "description": ""
+              }
+            ]
+          },
+          {
+            "name": "Brunch",
+            "start_time": "10:00",
+            "end_time": "13:30",
+            "items": [
+              {
+                "name": "liquid egg",
+                "dietary_flags": ["Vegetarian", "Egg"],
+                "station": "omelet",
+                "description": ""
+              },
+              {
+                "name": "egg white",
+                "dietary_flags": ["Vegetarian", "Egg"],
+                "station": "omelet",
+                "description": ""
+              },
+              {
+                "name": "whole egg",
+                "dietary_flags": ["Vegetarian", "Egg"],
+                "station": "omelet",
+                "description": ""
+              },
+              {
+                "name": "turkey bacon",
+                "dietary_flags": [],
+                "station": "omelet",
+                "description": ""
+              },
+              { "name": "pit ham", "dietary_flags": [], "station": "omelet", "description": "" },
+              {
+                "name": "turkey sausage link",
+                "dietary_flags": [],
+                "station": "omelet",
+                "description": ""
+              },
+              {
+                "name": "vegan chorizo",
+                "dietary_flags": ["Vegan", "Soy"],
+                "station": "omelet",
+                "description": ""
+              },
+              {
+                "name": "cheddar jack cheese",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "omelet",
+                "description": ""
+              },
+              {
+                "name": "diced tomato",
+                "dietary_flags": ["Vegan"],
+                "station": "omelet",
+                "description": ""
+              },
+              {
+                "name": "bell pepper",
+                "dietary_flags": ["Vegan"],
+                "station": "omelet",
+                "description": ""
+              },
+              {
+                "name": "onion",
+                "dietary_flags": ["Vegan"],
+                "station": "omelet",
+                "description": ""
+              },
+              {
+                "name": "mushrooms",
+                "dietary_flags": ["Vegan"],
+                "station": "omelet",
+                "description": ""
+              },
+              {
+                "name": "scrambled eggs",
+                "dietary_flags": ["Vegetarian", "Egg"],
+                "station": "breakfast",
+                "description": ""
+              },
+              {
+                "name": "scrambled eggs with cheese",
+                "dietary_flags": ["Vegetarian", "Milk", "Egg"],
+                "station": "breakfast",
+                "description": ""
+              },
+              {
+                "name": "hard-boiled egg",
+                "dietary_flags": ["Vegetarian", "Egg"],
+                "station": "breakfast",
+                "description": ""
+              },
+              {
+                "name": "breakfast home fries",
+                "dietary_flags": ["Vegan"],
+                "station": "breakfast",
+                "description": ""
+              },
+              {
+                "name": "turkey and sweet potato hash",
+                "dietary_flags": ["Vegan"],
+                "station": "breakfast",
+                "description": ""
+              },
+              {
+                "name": "turkey bacon",
+                "dietary_flags": [],
+                "station": "breakfast",
+                "description": ""
+              },
+              {
+                "name": "chocolate chip pancake",
+                "dietary_flags": ["Vegetarian", "Wheat/Gluten", "Milk", "Egg", "Soy"],
+                "station": "breakfast",
+                "description": ""
+              },
+              {
+                "name": "pancake syrup",
+                "dietary_flags": ["Vegan"],
+                "station": "breakfast",
+                "description": ""
+              },
+              {
+                "name": "vegetarian sausage",
+                "dietary_flags": ["Vegetarian", "Wheat/Gluten", "Milk", "Soy"],
+                "station": "breakfast",
+                "description": ""
+              },
+              {
+                "name": "lettuce",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "spinach",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "green beans",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "broccoli",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "carrots",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "celery",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "cucumber",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "bell pepper",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "tomato",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              { "name": "corn", "dietary_flags": ["Vegan"], "station": "salad", "description": "" },
+              { "name": "peas", "dietary_flags": ["Vegan"], "station": "salad", "description": "" },
+              {
+                "name": "garbanzo beans",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "pineapple",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "banana",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "apple",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "grapes",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "orange",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "cantaloupe",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "honeydew",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "watermelon",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "cheddar cheese",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "parmesan cheese",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "cottage cheese low-fat",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "salad",
+                "description": ""
+              },
+              { "name": "chicken", "dietary_flags": [], "station": "salad", "description": "" },
+              {
+                "name": "tofu",
+                "dietary_flags": ["Vegan", "Soy"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "cage free egg",
+                "dietary_flags": ["Vegetarian", "Egg"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "add tuna (not for raw applications)",
+                "dietary_flags": ["Fish"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "yogurt",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "low-fat yogurt",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "strawberry yogurt",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "vanilla yogurt",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "low fat vanilla yogurt",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "cream of wheat",
+                "dietary_flags": ["Vegan", "Wheat/Gluten"],
+                "station": "stockpot",
+                "description": ""
+              },
+              {
+                "name": "creamy mushroom soup",
+                "dietary_flags": ["Milk"],
+                "station": "stockpot",
+                "description": ""
+              },
+              {
+                "name": "italian herb roasted bone-in chicken",
+                "dietary_flags": [],
+                "station": "comfort",
+                "description": ""
+              },
+              {
+                "name": "creamy mushroom risotto",
+                "dietary_flags": ["Milk"],
+                "station": "comfort",
+                "description": ""
+              },
+              {
+                "name": "roasted eggplant and onion",
+                "dietary_flags": ["Vegan"],
+                "station": "comfort",
+                "description": ""
+              },
+              {
+                "name": "maple oat chia seed pudding with fruit",
+                "dietary_flags": ["Vegan"],
+                "station": "oasis",
+                "description": ""
+              },
+              {
+                "name": "mediterranean-style eggplant and ground beef",
+                "dietary_flags": ["Halal"],
+                "station": "oasis",
+                "description": "eggplant, bell pepper, ground beef, tomatoes, onion, olive oil, salt, garlic, mustard seed, fennel seed, black pepper, red chili flakes, turmeric"
+              },
+              {
+                "name": "mediterranean eggplant and lentils",
+                "dietary_flags": ["Vegan"],
+                "station": "oasis",
+                "description": "eggplant, bell pepper, tomatoes, lentils, onion, olive oil, salt, garlic, mustard seed, fennel seed, black pepper, red chii flakes, turmeric"
+              },
+              {
+                "name": "cooked millet",
+                "dietary_flags": ["Vegan"],
+                "station": "oasis",
+                "description": ""
+              },
+              {
+                "name": "roasted green beans and tomatoes",
+                "dietary_flags": ["Vegan"],
+                "station": "oasis",
+                "description": "string beans, tomatoes, canola oil, salt, black pepper"
+              },
+              {
+                "name": "marinara sauce",
+                "dietary_flags": ["Vegan"],
+                "station": "oasis",
+                "description": ""
+              },
+              {
+                "name": "gluten free pasta",
+                "dietary_flags": ["Vegan"],
+                "station": "oasis",
+                "description": ""
+              },
+              {
+                "name": "cheese pizza",
+                "dietary_flags": ["Vegetarian", "Wheat/Gluten", "Milk"],
+                "station": "pizza, bread and flat bread",
+                "description": ""
+              },
+              {
+                "name": "pepperoni pizza",
+                "dietary_flags": ["Wheat/Gluten", "Milk"],
+                "station": "pizza, bread and flat bread",
+                "description": ""
+              },
+              {
+                "name": "vegetable pizza",
+                "dietary_flags": ["Vegetarian", "Wheat/Gluten", "Milk"],
+                "station": "pizza, bread and flat bread",
+                "description": ""
+              },
+              {
+                "name": "spinach artichoke pizza",
+                "dietary_flags": ["Vegetarian", "Wheat/Gluten", "Milk"],
+                "station": "pizza, bread and flat bread",
+                "description": ""
+              },
+              {
+                "name": "graham cracker",
+                "dietary_flags": ["Vegetarian", "Wheat/Gluten", "Soy"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "white chocolate chip",
+                "dietary_flags": ["Vegetarian", "Milk", "Soy"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "oreo cookie crumbles",
+                "dietary_flags": ["Vegan", "Wheat/Gluten", "Soy"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "hot sauce",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "hot sauce",
+                "dietary_flags": [],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "worcestershire sauce",
+                "dietary_flags": ["Fish", "Soy"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "hot sauce",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "mustard",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "dijon mustard",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "mustard",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "pickle relish",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "peanut butter",
+                "dietary_flags": ["Vegan", "Peanut"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "cream cheese",
+                "dietary_flags": ["Milk"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "ketchup",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "strawberry jelly preserves",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "grape jelly",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "mayonnaise",
+                "dietary_flags": ["Vegetarian", "Egg"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "butter",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "gatorade fruit punch",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "mountain dew",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "mug root beer",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "crush orange",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "pepsi",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "tropicana lemonade",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "diet pepsi",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "cranberry juice",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "orange juice",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "apple juice",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "guava juice",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "oat milk",
+                "dietary_flags": ["Vegan", "Wheat/Gluten"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "soy milk",
+                "dietary_flags": ["Vegan", "Soy"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "milk",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "milk",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "half and half",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "chocolate milk",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "coffee",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "decaf coffee",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "tea",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "cocoa powder",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "sugar",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "honey",
+                "dietary_flags": ["Vegetarian"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "dried cranberry",
+                "dietary_flags": ["Vegan"],
+                "station": "toppings",
+                "description": ""
+              },
+              {
+                "name": "raisins",
+                "dietary_flags": ["Vegan"],
+                "station": "toppings",
+                "description": ""
+              },
+              {
+                "name": "saltine crackers",
+                "dietary_flags": ["Vegan", "Wheat/Gluten", "Soy"],
+                "station": "toppings",
+                "description": ""
+              },
+              {
+                "name": "crouton",
+                "dietary_flags": ["Vegan", "Sesame", "Wheat/Gluten"],
+                "station": "toppings",
+                "description": ""
+              },
+              {
+                "name": "oyster cracker",
+                "dietary_flags": ["Vegetarian", "Wheat/Gluten", "Milk", "Soy"],
+                "station": "toppings",
+                "description": ""
+              }
+            ]
+          },
+          {
+            "name": "Lunch",
+            "start_time": "11:00",
+            "end_time": "15:00",
+            "items": [
+              {
+                "name": "lettuce",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "spinach",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "green beans",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "broccoli",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "carrots",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "celery",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "cucumber",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "bell pepper",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "tomato",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              { "name": "corn", "dietary_flags": ["Vegan"], "station": "salad", "description": "" },
+              { "name": "peas", "dietary_flags": ["Vegan"], "station": "salad", "description": "" },
+              {
+                "name": "garbanzo beans",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "pineapple",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "banana",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "apple",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "grapes",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "orange",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "cantaloupe",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "honeydew",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "watermelon",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "cheddar cheese",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "parmesan cheese",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "cottage cheese low-fat",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "salad",
+                "description": ""
+              },
+              { "name": "chicken", "dietary_flags": [], "station": "salad", "description": "" },
+              {
+                "name": "tofu",
+                "dietary_flags": ["Vegan", "Soy"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "cage free egg",
+                "dietary_flags": ["Vegetarian", "Egg"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "add tuna (not for raw applications)",
+                "dietary_flags": ["Fish"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "yogurt",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "low-fat yogurt",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "strawberry yogurt",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "vanilla yogurt",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "low fat vanilla yogurt",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "hot sauce",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "hot sauce",
+                "dietary_flags": [],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "worcestershire sauce",
+                "dietary_flags": ["Fish", "Soy"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "hot sauce",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "mustard",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "dijon mustard",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "mustard",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "pickle relish",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "peanut butter",
+                "dietary_flags": ["Vegan", "Peanut"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "cream cheese",
+                "dietary_flags": ["Milk"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "ketchup",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "strawberry jelly preserves",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "grape jelly",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "mayonnaise",
+                "dietary_flags": ["Vegetarian", "Egg"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "butter",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "gatorade fruit punch",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "mountain dew",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "mug root beer",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "crush orange",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "pepsi",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "tropicana lemonade",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "diet pepsi",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "cranberry juice",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "orange juice",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "apple juice",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "guava juice",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "oat milk",
+                "dietary_flags": ["Vegan", "Wheat/Gluten"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "soy milk",
+                "dietary_flags": ["Vegan", "Soy"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "milk",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "milk",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "half and half",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "chocolate milk",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "coffee",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "decaf coffee",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "tea",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "cocoa powder",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "sugar",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "honey",
+                "dietary_flags": ["Vegetarian"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "dried cranberry",
+                "dietary_flags": ["Vegan"],
+                "station": "toppings",
+                "description": ""
+              },
+              {
+                "name": "raisins",
+                "dietary_flags": ["Vegan"],
+                "station": "toppings",
+                "description": ""
+              },
+              {
+                "name": "saltine crackers",
+                "dietary_flags": ["Vegan", "Wheat/Gluten", "Soy"],
+                "station": "toppings",
+                "description": ""
+              },
+              {
+                "name": "crouton",
+                "dietary_flags": ["Vegan", "Sesame", "Wheat/Gluten"],
+                "station": "toppings",
+                "description": ""
+              },
+              {
+                "name": "oyster cracker",
+                "dietary_flags": ["Vegetarian", "Wheat/Gluten", "Milk", "Soy"],
+                "station": "toppings",
+                "description": ""
+              }
+            ]
+          },
+          {
+            "name": "Dinner",
+            "start_time": "17:00",
+            "end_time": "20:30",
+            "items": [
+              {
+                "name": "lettuce",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "spinach",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "green beans",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "broccoli",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "carrots",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "celery",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "cucumber",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "bell pepper",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "tomato",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              { "name": "corn", "dietary_flags": ["Vegan"], "station": "salad", "description": "" },
+              { "name": "peas", "dietary_flags": ["Vegan"], "station": "salad", "description": "" },
+              {
+                "name": "garbanzo beans",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "pineapple",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "banana",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "apple",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "grapes",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "orange",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "cantaloupe",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "honeydew",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "watermelon",
+                "dietary_flags": ["Vegan"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "cheddar cheese",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "parmesan cheese",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "cottage cheese low-fat",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "salad",
+                "description": ""
+              },
+              { "name": "chicken", "dietary_flags": [], "station": "salad", "description": "" },
+              {
+                "name": "tofu",
+                "dietary_flags": ["Vegan", "Soy"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "cage free egg",
+                "dietary_flags": ["Vegetarian", "Egg"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "add tuna (not for raw applications)",
+                "dietary_flags": ["Fish"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "yogurt",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "low-fat yogurt",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "strawberry yogurt",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "vanilla yogurt",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "low fat vanilla yogurt",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "salad",
+                "description": ""
+              },
+              {
+                "name": "creamy mushroom soup",
+                "dietary_flags": ["Milk"],
+                "station": "stockpot",
+                "description": ""
+              },
+              {
+                "name": "bacon, broccoli and cheddar soup",
+                "dietary_flags": ["Milk"],
+                "station": "stockpot",
+                "description": ""
+              },
+              {
+                "name": "ground beef patty, hamburger",
+                "dietary_flags": ["Halal"],
+                "station": "grill",
+                "description": ""
+              },
+              {
+                "name": "all-beef hot dog",
+                "dietary_flags": ["Halal"],
+                "station": "grill",
+                "description": ""
+              },
+              {
+                "name": "grilled chicken breast",
+                "dietary_flags": ["Halal"],
+                "station": "grill",
+                "description": ""
+              },
+              {
+                "name": "tofu",
+                "dietary_flags": ["Vegan", "Soy"],
+                "station": "grill",
+                "description": ""
+              },
+              {
+                "name": "french fries",
+                "dietary_flags": ["Wheat/Gluten"],
+                "station": "grill",
+                "description": ""
+              },
+              {
+                "name": "grilled vegetables",
+                "dietary_flags": ["Vegan"],
+                "station": "grill",
+                "description": ""
+              },
+              {
+                "name": "creamy mushroom risotto",
+                "dietary_flags": ["Milk"],
+                "station": "comfort",
+                "description": ""
+              },
+              {
+                "name": "baked white fish",
+                "dietary_flags": ["Fish", "Soy"],
+                "station": "comfort",
+                "description": ""
+              },
+              {
+                "name": "cheese ravioli with parmesan pesto cream sauce",
+                "dietary_flags": ["Vegetarian", "Wheat/Gluten", "Milk"],
+                "station": "comfort",
+                "description": ""
+              },
+              {
+                "name": "sauteed spinach and onions",
+                "dietary_flags": ["Vegan"],
+                "station": "comfort",
+                "description": ""
+              },
+              {
+                "name": "beef taco meat",
+                "dietary_flags": [],
+                "station": "action",
+                "description": ""
+              },
+              {
+                "name": "spicy mexican-style tomato rice",
+                "dietary_flags": [],
+                "station": "action",
+                "description": ""
+              },
+              {
+                "name": "jalapenos",
+                "dietary_flags": ["Vegan"],
+                "station": "action",
+                "description": ""
+              },
+              {
+                "name": "sour cream",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "action",
+                "description": ""
+              },
+              {
+                "name": "pico de gallo",
+                "dietary_flags": ["Vegan"],
+                "station": "action",
+                "description": ""
+              },
+              {
+                "name": "cheddar jack cheese",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "action",
+                "description": ""
+              },
+              {
+                "name": "iceberg lettuce",
+                "dietary_flags": ["Vegan"],
+                "station": "action",
+                "description": ""
+              },
+              {
+                "name": "pinto beans",
+                "dietary_flags": [],
+                "station": "action",
+                "description": ""
+              },
+              {
+                "name": "corn tortilla",
+                "dietary_flags": ["Vegan"],
+                "station": "action",
+                "description": ""
+              },
+              {
+                "name": "proven\u00e7al chicken with tomatoes, olives, and fresh herbs",
+                "dietary_flags": ["Halal"],
+                "station": "oasis",
+                "description": "chicken, onion, tomatoes, olives, parsley, basil, oregano, thyme, rosemary, canola oil, garlic, salt, fennel seed, black pepper"
+              },
+              {
+                "name": "cannellini bean bajane",
+                "dietary_flags": ["Vegan"],
+                "station": "oasis",
+                "description": "garbanzo beans, leeks, fennel, carrot, spinach, white wine, lemon, garlic, olive oil, thyme, salt, fennel seed, black pepper"
+              },
+              {
+                "name": "quinoa with parsley",
+                "dietary_flags": ["Vegan"],
+                "station": "oasis",
+                "description": ""
+              },
+              {
+                "name": "roasted zucchini, squash, and bell peppers",
+                "dietary_flags": ["Vegan"],
+                "station": "oasis",
+                "description": "zucchini, yellow squash, bell pepper, olive oil, salt, black pepper"
+              },
+              {
+                "name": "marinara sauce",
+                "dietary_flags": ["Vegan"],
+                "station": "oasis",
+                "description": ""
+              },
+              {
+                "name": "gluten free pasta",
+                "dietary_flags": ["Vegan"],
+                "station": "oasis",
+                "description": ""
+              },
+              {
+                "name": "cheese pizza",
+                "dietary_flags": ["Vegetarian", "Wheat/Gluten", "Milk"],
+                "station": "pizza, bread and flat bread",
+                "description": ""
+              },
+              {
+                "name": "pepperoni pizza",
+                "dietary_flags": ["Wheat/Gluten", "Milk"],
+                "station": "pizza, bread and flat bread",
+                "description": ""
+              },
+              {
+                "name": "vegetable pizza",
+                "dietary_flags": ["Vegetarian", "Wheat/Gluten", "Milk"],
+                "station": "pizza, bread and flat bread",
+                "description": ""
+              },
+              {
+                "name": "hot sauce",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "hot sauce",
+                "dietary_flags": [],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "worcestershire sauce",
+                "dietary_flags": ["Fish", "Soy"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "hot sauce",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "mustard",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "dijon mustard",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "mustard",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "pickle relish",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "peanut butter",
+                "dietary_flags": ["Vegan", "Peanut"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "cream cheese",
+                "dietary_flags": ["Milk"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "ketchup",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "strawberry jelly preserves",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "grape jelly",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "mayonnaise",
+                "dietary_flags": ["Vegetarian", "Egg"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "butter",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "gatorade fruit punch",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "mountain dew",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "mug root beer",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "crush orange",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "pepsi",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "tropicana lemonade",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "diet pepsi",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "cranberry juice",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "orange juice",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "apple juice",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "guava juice",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "oat milk",
+                "dietary_flags": ["Vegan", "Wheat/Gluten"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "soy milk",
+                "dietary_flags": ["Vegan", "Soy"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "milk",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "milk",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "half and half",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "chocolate milk",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "coffee",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "decaf coffee",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "tea",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "cocoa powder",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "sugar",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "honey",
+                "dietary_flags": ["Vegetarian"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "dried cranberry",
+                "dietary_flags": ["Vegan"],
+                "station": "toppings",
+                "description": ""
+              },
+              {
+                "name": "raisins",
+                "dietary_flags": ["Vegan"],
+                "station": "toppings",
+                "description": ""
+              },
+              {
+                "name": "saltine crackers",
+                "dietary_flags": ["Vegan", "Wheat/Gluten", "Soy"],
+                "station": "toppings",
+                "description": ""
+              },
+              {
+                "name": "crouton",
+                "dietary_flags": ["Vegan", "Sesame", "Wheat/Gluten"],
+                "station": "toppings",
+                "description": ""
+              },
+              {
+                "name": "oyster cracker",
+                "dietary_flags": ["Vegetarian", "Wheat/Gluten", "Milk", "Soy"],
+                "station": "toppings",
+                "description": ""
+              }
+            ]
+          },
+          {
+            "name": "Late Night",
+            "start_time": "22:00",
+            "end_time": "01:00",
+            "items": [
+              {
+                "name": "hot sauce",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "hot sauce",
+                "dietary_flags": [],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "worcestershire sauce",
+                "dietary_flags": ["Fish", "Soy"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "hot sauce",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "mustard",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "dijon mustard",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "mustard",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "pickle relish",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "peanut butter",
+                "dietary_flags": ["Vegan", "Peanut"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "cream cheese",
+                "dietary_flags": ["Milk"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "ketchup",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "strawberry jelly preserves",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "grape jelly",
+                "dietary_flags": ["Vegan"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "mayonnaise",
+                "dietary_flags": ["Vegetarian", "Egg"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "butter",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "condiments",
+                "description": ""
+              },
+              {
+                "name": "gatorade fruit punch",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "mountain dew",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "mug root beer",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "crush orange",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "pepsi",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "tropicana lemonade",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "diet pepsi",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "cranberry juice",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "orange juice",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "apple juice",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "guava juice",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "oat milk",
+                "dietary_flags": ["Vegan", "Wheat/Gluten"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "soy milk",
+                "dietary_flags": ["Vegan", "Soy"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "milk",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "milk",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "half and half",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "chocolate milk",
+                "dietary_flags": ["Vegetarian", "Milk"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "coffee",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "decaf coffee",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "tea",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "cocoa powder",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "sugar",
+                "dietary_flags": ["Vegan"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "honey",
+                "dietary_flags": ["Vegetarian"],
+                "station": "beverages",
+                "description": ""
+              },
+              {
+                "name": "dried cranberry",
+                "dietary_flags": ["Vegan"],
+                "station": "toppings",
+                "description": ""
+              },
+              {
+                "name": "raisins",
+                "dietary_flags": ["Vegan"],
+                "station": "toppings",
+                "description": ""
+              },
+              {
+                "name": "saltine crackers",
+                "dietary_flags": ["Vegan", "Wheat/Gluten", "Soy"],
+                "station": "toppings",
+                "description": ""
+              },
+              {
+                "name": "crouton",
+                "dietary_flags": ["Vegan", "Sesame", "Wheat/Gluten"],
+                "station": "toppings",
+                "description": ""
+              },
+              {
+                "name": "oyster cracker",
+                "dietary_flags": ["Vegetarian", "Wheat/Gluten", "Milk", "Soy"],
+                "station": "toppings",
+                "description": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

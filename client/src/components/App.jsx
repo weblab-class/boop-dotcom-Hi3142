@@ -9,7 +9,6 @@ import "../utilities.css";
 import { socket } from "../client-socket";
 
 import { get, post } from "../utilities";
-import { NewReview } from "./modules/newreview";
 
 export const UserContext = createContext(null);
 
@@ -18,6 +17,7 @@ export const UserContext = createContext(null);
  */
 const App = () => {
   const [userId, setUserId] = useState(undefined);
+  const [todayItems, setTodayItems] = useState();
 
   useEffect(() => {
     get("/api/whoami").then((user) => {
@@ -34,9 +34,9 @@ const App = () => {
     //into an array
     //for every item returned, find the corresponding ._id in the mongodb
     //if there is no such item, make it & put it in the mongodb
-    fetch("http://m.mit.edu/apis/dining/venues/house").then((data) => {
-      console.log(data);
-    });
+    //fetch("http://m.mit.edu/apis/dining/venues/house").then((data) => {
+    //  console.log(data);
+    // });
   }, []);
 
   const handleLogin = (credentialResponse) => {
