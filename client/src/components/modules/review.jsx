@@ -9,14 +9,11 @@ const Review = (props) => {
   return (
     <div className="reviewWrap1">
       <div className="reviewWrap">
-        <p className="userName">
-          {props.reviewobj.poster_name} gives {props.reviewobj.rating} stars
-        </p>
-        <p>{props.reviewobj.timestamp}</p>
+        <p className="userName">{props.reviewobj.poster_name} | </p>
+        <p className="rating"> {props.reviewobj.rating} stars</p>
       </div>
       <hr />
-      <p>{props.reviewobj.review_text}</p>
-      <p>{props.reviewobj.parent_item}</p>
+      <p className="reviewText">{props.reviewobj.review_text}</p>
     </div>
   );
 };

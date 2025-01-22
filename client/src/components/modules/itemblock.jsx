@@ -3,6 +3,7 @@ import Review from "./review.jsx";
 import ReviewBlock from "./reviewblock.jsx";
 import { get, post } from "../../utilities";
 import MenuItemDisplay from "./menuitemdisplay.jsx";
+import "./itemblock.css";
 
 /**
  * Card is a component for displaying content like stories
@@ -23,14 +24,34 @@ const ItemBlock = (props) => {
     setReviews(reviews.concat([reviewObj]));
   };
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleContent = () => {
+    setIsOpen((prevState) => !prevState); // Toggle the state between true and false
+  };
+
   return (
     <div>
-      <MenuItemDisplay menuitem={props.menuitem} />
-      <ReviewBlock
-        menuitem={props.menuitem}
-        reviews={reviews.filter((review) => review.parent_item === props.menuitem._id)}
-        reviewUpdater={reviewUpdater}
-      />
+      {/* Collapsible button */}
+      <button onClick={toggleContent} className={`collapsible ${isOpen ? "active" : ""}`}>
+        <MenuItemDisplay menuitem={props.menuitem} />
+      </button>
+
+      {/* Collapsible content with dynamic maxHeight */}
+      <div
+        style={{
+          maxHeight: isOpen ? "300px" : "0", // Set maxHeight based on state
+          overflow: "scroll",
+          transition: "max-height 0.2s ease-out", // Smooth transition for opening/closing
+        }}
+        className="content"
+      >
+        <ReviewBlock
+          menuitem={props.menuitem}
+          reviews={reviews.filter((review) => review.parent_item === props.menuitem._id)}
+          reviewUpdater={reviewUpdater}
+        />
+      </div>
     </div>
   );
 };

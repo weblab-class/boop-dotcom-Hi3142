@@ -6,9 +6,17 @@
 
 .reviewWrap {
   display: flex;
-  justify-content: space-between;
 }
 
 .userName {
-  font-weight: 800 !important;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+.rating {
+  color: rgb(255, 221, 0);
+}
+
+.reviewText {
+  color: rgb(196, 196, 196);
 }
