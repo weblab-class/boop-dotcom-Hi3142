@@ -11,6 +11,7 @@ import { SearchContext } from "../pages/Search";
 Component that holds the buttons to pick search options in a menu.
 */
 const MenuOptionBar = (props) => {
+  const { userId } = useContext(UserContext);
   const { sortType, setSortType, favoritesOnly, setFavoritesOnly } = useContext(SearchContext);
   const setTop = () => {
     setSortType("top");
@@ -29,8 +30,16 @@ const MenuOptionBar = (props) => {
       <Checkbox label="Top" value={sortType === "top"} onChange={setTop}></Checkbox>
       &ensp;
       <Checkbox label="Hot" value={sortType === "hot"} onChange={setHot}></Checkbox>
-      &emsp; &emsp;
-      <Checkbox label="Favorites Only" value={favoritesOnly} onChange={toggleFavorites}></Checkbox>
+      {userId && (
+        <>
+          &emsp; &emsp;
+          <Checkbox
+            label="Favorites Only"
+            value={favoritesOnly}
+            onChange={toggleFavorites}
+          ></Checkbox>
+        </>
+      )}
     </section>
   );
 };

@@ -3,6 +3,7 @@ import { GoogleLogin, googleLogout } from "@react-oauth/google";
 
 import "../../utilities.css";
 import { UserContext } from "../App";
+import { get } from "../../utilities";
 import MenuItemDisplay from "../modules/menuitemdisplay.jsx";
 import Menu from "../modules/menu.jsx";
 import "./Search.css";
@@ -10,7 +11,7 @@ import "./Search.css";
 export const SearchContext = createContext(null);
 
 const Search = () => {
-  const { userId, handleLogin, handleLogout, userFavorites } = useContext(UserContext);
+  const { userId, userFavorites } = useContext(UserContext);
 
   useEffect(() => {
     document.title = "Search - Bone Apple Tea!";
@@ -23,7 +24,7 @@ const Search = () => {
     avg_rating: 4.3,
     num_ratings: 17,
     hot_upvotes: 3,
-    dietary_tags: ["Kosher", "Gluten free"],
+    dietary_flags: ["Kosher", "Gluten free"],
     reviews: [],
     _id: "hello",
   };
@@ -35,7 +36,7 @@ const Search = () => {
     avg_rating: 2.3,
     num_ratings: 3,
     hot_upvotes: 2,
-    dietary_tags: ["Kosher"],
+    dietary_flags: ["Kosher"],
     reviews: [],
     _id: "hi",
   };
@@ -47,7 +48,7 @@ const Search = () => {
     avg_rating: 4.8,
     num_ratings: 2,
     hot_upvotes: 0,
-    dietary_tags: [],
+    dietary_flags: [],
     reviews: [],
     _id: "hey",
   };
@@ -59,7 +60,7 @@ const Search = () => {
     avg_rating: 3.1,
     num_ratings: 2,
     hot_upvotes: 0,
-    dietary_tags: [],
+    dietary_flags: [],
     reviews: [],
     _id: "huh",
   };
@@ -71,7 +72,7 @@ const Search = () => {
     avg_rating: 3.8,
     num_ratings: 2,
     hot_upvotes: 0,
-    dietary_tags: [],
+    dietary_flags: [],
     reviews: [],
     _id: "yea",
   };
@@ -83,7 +84,7 @@ const Search = () => {
     avg_rating: 4.5,
     num_ratings: 2,
     hot_upvotes: 4,
-    dietary_tags: [],
+    dietary_flags: [],
     reviews: [],
     _id: "yayyy",
   };
@@ -95,21 +96,33 @@ const Search = () => {
     avg_rating: 3.1,
     num_ratings: 2,
     hot_upvotes: 1,
-    dietary_tags: [],
+    dietary_flags: [],
     reviews: [],
     _id: "gr9",
   };
 
   const itemlist = [myitem1, myitem2, myitem3, myitem4, myitem5, myitem6, myitem7];
 
+  const [userDietaryFlags, setUserDietaryFlags] = useState([]);
+
+  useEffect(() => {
+    get(`/api/dietary-flags`, { userId: userId }).then((returnedFlags) => {
+      setUserDietaryFlags(returnedFlags);
+    });
+  }, []);
+
+  useEffect(() => {
+    console.log(userDietaryFlags);
+  }, [userDietaryFlags]);
+
   const myrequirements = {
     halls: ["Baker", "McCormick", "Next", "Maseeh"],
-    dietary_tags: [],
+    dietary_flags: userDietaryFlags,
   };
 
   const Satisfies = (item, requirements) => {
     if (requirements.halls.includes(item.location)) {
-      return requirements.dietary_tags.every((tag) => item.dietary_tags.includes(tag));
+      return requirements.dietary_flags.every((tag) => item.dietary_flags.includes(tag));
     } else {
       console.log("weewoo");
       return false;
@@ -148,12 +161,10 @@ const Search = () => {
     setFavoritesOnly,
   };
 
-  const newitemlist = itemlist.filter((item) => Satisfies(item, myrequirements));
-
   return (
     <>
       <SearchContext.Provider value={searchContextValue}>
-        <Menu itemlist={filteredItems} sortType={sortType} setSortType={setSortType} />
+        <Menu itemlist={filteredItems} />
       </SearchContext.Provider>
     </>
   );

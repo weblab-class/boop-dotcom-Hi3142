@@ -9,14 +9,12 @@ import MenuOptionBar from "./menuoptionbar";
 /*
 Holds all the menuitems in response to a search for display
 @param itemlist: {MenuItem[]} of menu items
-@param sortType: String denoting sort type, used in menu option bar
-@param setSortType: React Hook for sortType, used in menu option bar
 */
 const Menu = (props) => {
   return (
     <section className="menuWrapper">
       <div className="menuTitle">MENU</div>
-      <MenuOptionBar sortType={props.sortType} setSortType={props.setSortType} />
+      <MenuOptionBar />
       <div className="itemArray">
         {" "}
         {props.itemlist.map((menuitem) => (

@@ -73,7 +73,6 @@ router.get(`/profile`, (req, res) => {
 });
 
 router.get("/favorites", (req, res) => {
-  console.log(req);
   User.findOne({ _id: req.user._id })
     .then((user) => {
       res.send(user.favorites);
@@ -111,6 +110,44 @@ router.post("/remove-favorite", (req, res) => {
   });
 });
 
+router.get("/dietary-flags", (req, res) => {
+  User.findOne({ _id: req.user._id })
+    .then((user) => {
+      res.send(user.dietary_flags);
+    })
+    .catch((err) => {
+      res.status(500).send("User Not");
+    });
+});
+
+router.post("/add-dietary-flag", (req, res) => {
+  User.findOne({ _id: req.user._id }).then((user) => {
+    if (!user.dietary_flags) {
+      user.dietary_flags = [];
+    }
+    if (!user.dietary_flags.includes(req.body.item)) {
+      user.dietary_flags.push(req.body.item);
+      user.save();
+    }
+    res.send({ dietary_flags: user.dietary_flags });
+  });
+});
+
+router.post("/remove-dietary-flag", (req, res) => {
+  User.findOne({ _id: req.user._id }).then((user) => {
+    if (!user.dietary_flags) {
+      user.dietary_flags = [];
+    }
+    const index = user.dietary_flags.indexOf(req.body.item);
+    if (index > -1) {
+      // only splice array when item is found
+      user.dietary_flags.splice(index, 1); // 2nd parameter means remove one item only
+      user.save();
+    }
+    res.send({ dietary_flags: user.dietary_flags });
+  });
+});
+
 /*
 import data from "../../dining.json";
 console.log(data);
@@ -124,7 +161,7 @@ mealsList.forEach((element) => {
           name: newEle.name,
           location: "Maseeh",
           station: newEle.station,
-          dietary_tags: newEle.dietary_flags,
+          dietary_flags: newEle.dietary_flags,
         });
         newItem.save();
       }

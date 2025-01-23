@@ -7,7 +7,7 @@ const MenuItemSchema = new mongoose.Schema({
   avg_rating: Number,
   num_ratings: Number,
   hot_upvotes: Number,
-  dietary_tags: [String],
+  dietary_flags: [String],
   meal: String,
 });
 

@@ -19,7 +19,7 @@ const App = () => {
   const [userId, setUserId] = useState(undefined);
   const [userName, setUserName] = useState("Anonymous User");
   const [userFavorites, setUserFavorites] = useState([]);
-  const [userDietaryTags, setUserDietaryTags] = useState([]);
+  const [userDietaryFlags, setuserDietaryFlags] = useState([]);
   const [todayItems, setTodayItems] = useState();
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const App = () => {
         setUserId(user._id);
         setUserName(user.name);
         setUserFavorites(user.favorites);
-        setUserDietaryTags(user.dietary_tags);
+        setuserDietaryFlags(user.dietary_flags);
       }
     });
   }, []);
@@ -65,7 +65,7 @@ const App = () => {
     userName,
     userFavorites,
     setUserFavorites,
-    userDietaryTags,
+    userDietaryFlags,
     handleLogin,
     handleLogout,
   };

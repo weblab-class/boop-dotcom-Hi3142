@@ -12,7 +12,7 @@ import "./menuitemdisplay.css";
  * @param {String} name, location, station
  * @param {Number} num_ratings
  * @param {Number} hot_upvotes
- * @param {[String]} dietary_tags
+ * @param {[String]} dietary_flags
  * @param {[Review]} reviews
  * @returns
  *

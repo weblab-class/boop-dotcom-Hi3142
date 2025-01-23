@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const UserSchema = new mongoose.Schema({
   name: String,
   googleid: String,
-  dietary_tags: [String],
+  dietary_flags: [String],
   favorites: [String], //foodItemIds
 });
 
