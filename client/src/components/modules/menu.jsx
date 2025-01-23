@@ -1,16 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import ItemBlock from "./itemblock";
 import { get } from "../../utilities";
 
 import "./menu.css";
+import { UserContext } from "../App";
+import MenuOptionBar from "./menuoptionbar";
 
-//component that holds all the menuitems in response to a search for display
-//takes in @param {MenuItem[]} of menu items
-
+/*
+Holds all the menuitems in response to a search for display
+@param itemlist: {MenuItem[]} of menu items
+@param sortType: String denoting sort type, used in menu option bar
+@param setSortType: React Hook for sortType, used in menu option bar
+*/
 const Menu = (props) => {
   return (
     <section className="menuWrapper">
-      <p className="menuTitle">MENU WRAPPER</p>
+      <div className="menuTitle">MENU</div>
+      <MenuOptionBar sortType={props.sortType} setSortType={props.setSortType} />
       <div className="itemArray">
         {" "}
         {props.itemlist.map((menuitem) => (

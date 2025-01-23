@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState, createContext } from "react";
 import { GoogleLogin, googleLogout } from "@react-oauth/google";
 
 import "../../utilities.css";
@@ -7,8 +7,10 @@ import MenuItemDisplay from "../modules/menuitemdisplay.jsx";
 import Menu from "../modules/menu.jsx";
 import "./Search.css";
 
+export const SearchContext = createContext(null);
+
 const Search = () => {
-  const { userId, handleLogin, handleLogout } = useContext(UserContext);
+  const { userId, handleLogin, handleLogout, userFavorites } = useContext(UserContext);
 
   useEffect(() => {
     document.title = "Search - Bone Apple Tea!";
@@ -20,7 +22,7 @@ const Search = () => {
     station: "action",
     avg_rating: 4.3,
     num_ratings: 17,
-    hot_upvotes: 1,
+    hot_upvotes: 3,
     dietary_tags: ["Kosher", "Gluten free"],
     reviews: [],
     _id: "hello",
@@ -32,7 +34,7 @@ const Search = () => {
     station: "dessert",
     avg_rating: 2.3,
     num_ratings: 3,
-    hot_upvotes: 0,
+    hot_upvotes: 2,
     dietary_tags: ["Kosher"],
     reviews: [],
     _id: "hi",
@@ -42,9 +44,9 @@ const Search = () => {
     name: "Stir Fry",
     location: "McCormick",
     station: "stir fry",
-    avg_rating: 4.1,
+    avg_rating: 4.8,
     num_ratings: 2,
-    hot_upvotes: 1,
+    hot_upvotes: 0,
     dietary_tags: [],
     reviews: [],
     _id: "hey",
@@ -54,7 +56,7 @@ const Search = () => {
     name: "Cheese Pizza",
     location: "Maseeh",
     station: "pizza",
-    avg_rating: 2.1,
+    avg_rating: 3.1,
     num_ratings: 2,
     hot_upvotes: 0,
     dietary_tags: [],
@@ -66,7 +68,7 @@ const Search = () => {
     name: "Pepperoni Pizza",
     location: "Maseeh",
     station: "pizza",
-    avg_rating: 2.8,
+    avg_rating: 3.8,
     num_ratings: 2,
     hot_upvotes: 0,
     dietary_tags: [],
@@ -98,12 +100,12 @@ const Search = () => {
     _id: "gr9",
   };
 
+  const itemlist = [myitem1, myitem2, myitem3, myitem4, myitem5, myitem6, myitem7];
+
   const myrequirements = {
     halls: ["Baker", "McCormick", "Next", "Maseeh"],
     dietary_tags: [],
   };
-
-  const itemlist = [myitem1, myitem2, myitem3, myitem4, myitem5, myitem6, myitem7];
 
   const Satisfies = (item, requirements) => {
     if (requirements.halls.includes(item.location)) {
@@ -114,11 +116,45 @@ const Search = () => {
     }
   };
 
+  const [satisfyingItems, setSatisfyingItems] = useState([]);
+  useEffect(() => {
+    setSatisfyingItems(itemlist.filter((item) => Satisfies(item, myrequirements)));
+  }, [itemlist, myrequirements]);
+
+  const [favoritesOnly, setFavoritesOnly] = useState(false);
+  const [favoritedItems, setFavoritedItems] = useState([]);
+  useEffect(() => {
+    setFavoritedItems(
+      favoritesOnly
+        ? satisfyingItems.filter((value) => userFavorites.includes(value.name))
+        : satisfyingItems
+    );
+  }, [favoritesOnly, userFavorites, satisfyingItems]);
+
+  const [sortType, setSortType] = useState("top");
+  const [filteredItems, setFilteredItems] = useState([]);
+  useEffect(() => {
+    if (sortType === "top") {
+      setFilteredItems(favoritedItems.sort((a, b) => b.avg_rating - a.avg_rating));
+    } else {
+      setFilteredItems(favoritedItems.sort((a, b) => b.hot_upvotes - a.hot_upvotes));
+    }
+  }, [sortType, favoritedItems]);
+
+  const searchContextValue = {
+    sortType,
+    setSortType,
+    favoritesOnly,
+    setFavoritesOnly,
+  };
+
   const newitemlist = itemlist.filter((item) => Satisfies(item, myrequirements));
 
   return (
     <>
-      <Menu itemlist={newitemlist} />
+      <SearchContext.Provider value={searchContextValue}>
+        <Menu itemlist={filteredItems} sortType={sortType} setSortType={setSortType} />
+      </SearchContext.Provider>
     </>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { get, post } from "../../utilities";
 import { UserContext } from "../App";
+import Checkbox from "./checkbox";
 
 import "./menuitemdisplay.css";
 //passed in a menuitem, will display the menuitem appropriately
@@ -72,15 +73,6 @@ const MenuItemDisplay = (props) => {
         </div>
       </div>
     </div>
-  );
-};
-
-const Checkbox = ({ label, value, onChange }) => {
-  return (
-    <label>
-      <input type="checkbox" checked={value} onChange={onChange} />
-      {label}
-    </label>
   );
 };
 
