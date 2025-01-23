@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { post } from "../../utilities";
+import { UserContext } from "../App";
+import { RatingReview } from "./RatingReview";
 import "./newreview.css";
 
 const NewReview = (props) => {
+  const userName = useContext(UserContext).userName;
+  const [rating, setRating] = useState(0);
   const [value, setValue] = useState("");
 
   // called whenever the user types in the new post input box
@@ -20,10 +24,10 @@ const NewReview = (props) => {
   const addNewReview = (value) => {
     const review = {
       review_text: value,
-      poster_name: "Anonymous User",
+      poster_name: userName,
       parent_item: props.parent_item,
       timestamp: Date.now(),
-      rating: 5,
+      rating: rating,
     };
 
     post("/api/review", review).then((reviewObj) => {
@@ -41,9 +45,14 @@ const NewReview = (props) => {
         onChange={handleChange}
         className="reviewInput"
       />
-      <button type="submit" value="Submit" onClick={handleSubmit} className="submitButton u-bold">
-        Submit
-      </button>
+      &ensp;
+      <span className="u-alignRight">
+        <RatingReview rating={rating} setRating={setRating} />
+        &ensp;
+        <button type="submit" value="Submit" onClick={handleSubmit} className="submitButton u-bold">
+          Submit
+        </button>
+      </span>
     </div>
   );
 };

@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { get } from "../../utilities";
+import React, { useState, useEffect, useContext } from "react";
+import { get, post } from "../../utilities";
+import { UserContext } from "../App";
 
 import "./menuitemdisplay.css";
 //passed in a menuitem, will display the menuitem appropriately
@@ -13,8 +14,44 @@ import "./menuitemdisplay.css";
  * @param {[String]} dietary_tags
  * @param {[Review]} reviews
  * @returns
+ *
+ * @param {boolean}
  */
 const MenuItemDisplay = (props) => {
+  const { userId, userFavorites, setUserFavorites } = useContext(UserContext);
+  const [checked, setChecked] = useState(false);
+
+  useEffect(() => {
+    if (!userId) {
+      console.warn("User ID is undefined");
+      return;
+    }
+
+    console.log(userId);
+    get("/api/favorites", { userid: userId }).then((returnedFavs) => {
+      setUserFavorites(returnedFavs);
+    });
+  }, [userId]);
+
+  useEffect(() => {
+    setChecked(userId !== undefined && userFavorites.includes(props.menuitem.name));
+  }, [userFavorites]);
+
+  const handleChange = () => {
+    console.log({ userid: userId, item: props.menuitem.name });
+    if (checked) {
+      post("/api/remove-favorite", { userid: userId, item: props.menuitem.name }).then((res) => {
+        setUserFavorites(res.favorites);
+        console.log({ userid: userId, item: props.menuitem.name });
+      });
+    } else {
+      post("/api/add-favorite", { userid: userId, item: props.menuitem.name }).then((res) => {
+        setUserFavorites(res.favorites);
+        console.log({ userid: userId, item: props.menuitem.name });
+      });
+    }
+  };
+
   return (
     <div>
       <div className="menuItemWrap">
@@ -25,11 +62,25 @@ const MenuItemDisplay = (props) => {
           </p>
         </div>
         <div className="right-aligned">
+          {userId && (
+            <p>
+              <Checkbox label="Favorite?" value={checked} onChange={handleChange} />
+            </p>
+          )}
           <p>Rating: {props.menuitem.avg_rating}</p>
           <p>Hot: {props.menuitem.hot_upvotes}</p>
         </div>
       </div>
     </div>
+  );
+};
+
+const Checkbox = ({ label, value, onChange }) => {
+  return (
+    <label>
+      <input type="checkbox" checked={value} onChange={onChange} />
+      {label}
+    </label>
   );
 };
 

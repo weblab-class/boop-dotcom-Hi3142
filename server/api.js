@@ -69,6 +69,45 @@ router.get(`/profile`, (req, res) => {
     });
 });
 
+router.get("/favorites", (req, res) => {
+  console.log(req);
+  User.findOne({ _id: req.user._id })
+    .then((user) => {
+      res.send(user.favorites);
+    })
+    .catch((err) => {
+      res.status(500).send("User Not");
+    });
+});
+
+router.post("/add-favorite", (req, res) => {
+  User.findOne({ _id: req.user._id }).then((user) => {
+    if (!user.favorites) {
+      user.favorites = [];
+    }
+    if (!user.favorites.includes(req.body.item)) {
+      user.favorites.push(req.body.item);
+      user.save();
+    }
+    res.send({ favorites: user.favorites });
+  });
+});
+
+router.post("/remove-favorite", (req, res) => {
+  User.findOne({ _id: req.user._id }).then((user) => {
+    if (!user.favorites) {
+      user.favorites = [];
+    }
+    const index = user.favorites.indexOf(req.body.item);
+    if (index > -1) {
+      // only splice array when item is found
+      user.favorites.splice(index, 1); // 2nd parameter means remove one item only
+      user.save();
+    }
+    res.send({ favorites: user.favorites });
+  });
+});
+
 /*
 import data from "../../dining.json";
 console.log(data);

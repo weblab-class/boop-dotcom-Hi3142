@@ -17,6 +17,9 @@ export const UserContext = createContext(null);
  */
 const App = () => {
   const [userId, setUserId] = useState(undefined);
+  const [userName, setUserName] = useState("Anonymous User");
+  const [userFavorites, setUserFavorites] = useState([]);
+  const [userDietaryTags, setUserDietaryTags] = useState([]);
   const [todayItems, setTodayItems] = useState();
 
   useEffect(() => {
@@ -24,6 +27,9 @@ const App = () => {
       if (user._id) {
         // they are registed in the database, and currently logged in.
         setUserId(user._id);
+        setUserName(user.name);
+        setUserFavorites(user.favorites);
+        setUserDietaryTags(user.dietary_tags);
       }
     });
   }, []);
@@ -56,6 +62,10 @@ const App = () => {
 
   const authContextValue = {
     userId,
+    userName,
+    userFavorites,
+    setUserFavorites,
+    userDietaryTags,
     handleLogin,
     handleLogout,
   };
