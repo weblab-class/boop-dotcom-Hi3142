@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { GoogleLogin, googleLogout } from "@react-oauth/google";
 
 import "../../utilities.css";
@@ -11,8 +11,12 @@ import Search from "./Search.jsx";
 const Skeleton = () => {
   const { userId, handleLogin, handleLogout } = useContext(UserContext);
 
+  useEffect(() => {
+    document.title = "Home - Bone Apple Tea!";
+  }, []);
+
   return (
-    <>
+    <div className="Skeleton-container">
       {userId ? (
         <button
           onClick={() => {
@@ -43,7 +47,7 @@ const Skeleton = () => {
       <a href="https://docs.google.com/document/d/110JdHAn3Wnp3_AyQLkqH2W8h5oby7OVsYIeHYSiUzRs/edit?usp=sharing">
         Check out this getting started guide
       </a>
-    </>
+    </div>
   );
 };
 

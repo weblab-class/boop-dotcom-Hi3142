@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { GoogleLogin, googleLogout } from "@react-oauth/google";
 
 import "../../utilities.css";
@@ -9,6 +9,11 @@ import "./Search.css";
 
 const Search = () => {
   const { userId, handleLogin, handleLogout } = useContext(UserContext);
+
+  useEffect(() => {
+    document.title = "Search - Bone Apple Tea!";
+  }, []);
+
   const myitem1 = {
     name: "Sushi sushi sushi >:)",
     location: "Next",

@@ -15,7 +15,7 @@ const Profile = () => {
   const [user, setUser] = useState();
 
   useEffect(() => {
-    document.title = "Profile Page";
+    document.title = "Profile Page - Bone Apple Tea!";
     console.log("fetch");
     get(`/api/profile`, { userId: userId }).then((userObj) => {
       console.log(userId);
