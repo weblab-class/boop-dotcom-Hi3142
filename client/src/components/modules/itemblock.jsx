@@ -13,9 +13,10 @@ import "./itemblock.css";
  */
 const ItemBlock = (props) => {
   const [reviews, setReviews] = useState([]);
+  const this_parent_item = props.menuitem._id;
 
   useEffect(() => {
-    get("/api/reviews", { parent_item: props.menuitem._id }).then((returnedReviews) => {
+    get("/api/reviews", { parent_item: this_parent_item }).then((returnedReviews) => {
       setReviews(returnedReviews);
     });
   }, []);
@@ -46,11 +47,7 @@ const ItemBlock = (props) => {
         }}
         className="content"
       >
-        <ReviewBlock
-          menuitem={props.menuitem}
-          reviews={reviews.filter((review) => review.parent_item === props.menuitem._id)}
-          reviewUpdater={reviewUpdater}
-        />
+        <ReviewBlock menuitem={props.menuitem} reviews={reviews} reviewUpdater={reviewUpdater} />
       </div>
     </div>
   );

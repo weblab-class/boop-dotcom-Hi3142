@@ -45,7 +45,10 @@ router.post("/initsocket", (req, res) => {
 // |------------------------------|
 
 router.get("/reviews", (req, res) => {
-  Review.find({ parent_item: req.query.parent_item }).then((reviews) => res.send(reviews));
+  Review.find({ parent_item: req.query.parent_item }).then((reviews) => {
+    res.send(reviews);
+    console.log(reviews);
+  });
 });
 
 router.post("/review", (req, res) => {

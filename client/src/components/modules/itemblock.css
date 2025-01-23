@@ -20,5 +20,5 @@
 .content {
   padding: 0px;
   background-color: rgb(52, 52, 52);
-  overflow: hidden;
+  overflow: scroll;
 }
