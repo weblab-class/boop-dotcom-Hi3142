@@ -73,7 +73,7 @@ const Profile = () => {
       {user ? (
         <div className="profile-wrapper">
           <h1>Hello, {user.name}!</h1>
-          <p>Manage your dietary flags</p>
+          <p>Manage your dietary flags:</p>
           {buttons.map((button) => (
             <div>
               <Checkbox

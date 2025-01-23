@@ -101,7 +101,15 @@ const Search = () => {
     _id: "gr9",
   };
 
-  const itemlist = [myitem1, myitem2, myitem3, myitem4, myitem5, myitem6, myitem7];
+  const [itemlist, setItemList] = useState([
+    myitem1,
+    myitem2,
+    myitem3,
+    myitem4,
+    myitem5,
+    myitem6,
+    myitem7,
+  ]);
 
   const [userDietaryFlags, setUserDietaryFlags] = useState([]);
 
@@ -113,26 +121,32 @@ const Search = () => {
 
   useEffect(() => {
     console.log(userDietaryFlags);
+    setRequirements({
+      halls: ["Baker", "McCormick", "Next", "Maseeh"],
+      dietary_flags: userDietaryFlags,
+    });
   }, [userDietaryFlags]);
 
-  const myrequirements = {
+  const [requirements, setRequirements] = useState({
     halls: ["Baker", "McCormick", "Next", "Maseeh"],
     dietary_flags: userDietaryFlags,
-  };
+  });
 
   const Satisfies = (item, requirements) => {
-    if (requirements.halls.includes(item.location)) {
-      return requirements.dietary_flags.every((tag) => item.dietary_flags.includes(tag));
-    } else {
-      console.log("weewoo");
-      return false;
-    }
+    const positive_flags = requirements.dietary_flags.filter((flag) => flag[0] !== "!");
+    const negative_flags = requirements.dietary_flags.filter((flag) => flag[0] === "!");
+    return (
+      requirements.halls.includes(item.location) &&
+      positive_flags.every((flag) => item.dietary_flags.includes(flag)) &&
+      !item.dietary_flags.some((flag) => negative_flags.includes("!" + flag))
+    );
   };
 
   const [satisfyingItems, setSatisfyingItems] = useState([]);
   useEffect(() => {
-    setSatisfyingItems(itemlist.filter((item) => Satisfies(item, myrequirements)));
-  }, [itemlist, myrequirements]);
+    console.log(requirements);
+    setSatisfyingItems(itemlist.filter((item) => Satisfies(item, requirements)));
+  }, [itemlist, requirements]);
 
   const [favoritesOnly, setFavoritesOnly] = useState(false);
   const [favoritedItems, setFavoritedItems] = useState([]);
