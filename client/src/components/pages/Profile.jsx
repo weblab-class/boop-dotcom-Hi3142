@@ -16,13 +16,9 @@ const Profile = () => {
 
   useEffect(() => {
     document.title = "Profile Page - Bone Apple Tea!";
-    console.log("fetch");
     if (userId) {
       get(`/api/profile`, { userId: userId }).then((userObj) => {
-        console.log(userId);
         setUser(userObj);
-        console.log("fetch");
-        console.log(userObj);
       });
       get(`/api/dietary-flags`, { userId: userId }).then((returnedFlags) => {
         setUserDietaryFlags(returnedFlags);
@@ -33,22 +29,14 @@ const Profile = () => {
     }
   }, [userId]);
 
-  useEffect(() => {
-    console.log(userDietaryFlags);
-  }, [userDietaryFlags]);
-
   const toggleDietaryFlag = (flag) => () => {
-    console.log("wheee");
     if (userDietaryFlags.includes(flag)) {
       post("/api/remove-dietary-flag", { item: flag }).then((res) => {
         setUserDietaryFlags(res.dietary_flags);
-        console.log(res);
       });
     } else {
-      console.log("aieee");
       post("/api/add-dietary-flag", { item: flag }).then((res) => {
         setUserDietaryFlags(res.dietary_flags);
-        console.log(res);
       });
     }
   };
@@ -65,6 +53,38 @@ const Profile = () => {
     {
       name: "Kosher",
       flag: "Kosher",
+    },
+    {
+      name: "Halal",
+      flag: "Halal",
+    },
+    {
+      name: "No Peanut",
+      flag: "!Peanut",
+    },
+    {
+      name: "No Milk",
+      flag: "!Milk",
+    },
+    {
+      name: "No Wheat/Gluten",
+      flag: "!Wheat/Gluten",
+    },
+    {
+      name: "No Soy",
+      flag: "!Soy",
+    },
+    {
+      name: "No Egg",
+      flag: "!Egg",
+    },
+    {
+      name: "No Fish",
+      flag: "!Fish",
+    },
+    {
+      name: "No Sesame",
+      flag: "!Sesame",
     },
   ];
 

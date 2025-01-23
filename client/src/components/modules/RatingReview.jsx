@@ -15,6 +15,7 @@ export function RatingReview({ rating, setRating }) {
             onClick={() => {
               setRating(star);
             }}
+            key={star}
           >
             {" "}
             ★{" "}

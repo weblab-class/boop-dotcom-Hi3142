@@ -11,6 +11,17 @@ Holds all the menuitems in response to a search for display
 @param itemlist: {MenuItem[]} of menu items
 */
 const Menu = (props) => {
+  const [itemBlocks, setItemBlocks] = useState();
+
+  useEffect(() => {
+    setItemBlocks(
+      props.itemlist.map((menuitem) => {
+        <ItemBlock menuitem={menuitem} key={`item_${menuitem._id}`} />;
+        //eventually we will fetch updated infor here
+      })
+    );
+  }, [props.itemlist]);
+
   return (
     <section className="menuWrapper">
       <div className="menuTitle">MENU</div>

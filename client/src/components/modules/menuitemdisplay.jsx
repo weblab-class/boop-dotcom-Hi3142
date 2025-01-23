@@ -27,8 +27,6 @@ const MenuItemDisplay = (props) => {
       console.warn("User ID is undefined");
       return;
     }
-
-    console.log(userId);
     get("/api/favorites", { userid: userId }).then((returnedFavs) => {
       setUserFavorites(returnedFavs);
     });
@@ -36,19 +34,16 @@ const MenuItemDisplay = (props) => {
 
   useEffect(() => {
     setChecked(userId !== undefined && userFavorites.includes(props.menuitem.name));
-  }, [userFavorites]);
+  }, [userFavorites, userId]);
 
   const handleChange = () => {
-    console.log({ userid: userId, item: props.menuitem.name });
     if (checked) {
       post("/api/remove-favorite", { userid: userId, item: props.menuitem.name }).then((res) => {
         setUserFavorites(res.favorites);
-        console.log({ userid: userId, item: props.menuitem.name });
       });
     } else {
       post("/api/add-favorite", { userid: userId, item: props.menuitem.name }).then((res) => {
         setUserFavorites(res.favorites);
-        console.log({ userid: userId, item: props.menuitem.name });
       });
     }
   };

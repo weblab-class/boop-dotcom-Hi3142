@@ -120,7 +120,6 @@ const Search = () => {
   }, []);
 
   useEffect(() => {
-    console.log(userDietaryFlags);
     setRequirements({
       halls: ["Baker", "McCormick", "Next", "Maseeh"],
       dietary_flags: userDietaryFlags,
@@ -144,7 +143,6 @@ const Search = () => {
 
   const [satisfyingItems, setSatisfyingItems] = useState([]);
   useEffect(() => {
-    console.log(requirements);
     setSatisfyingItems(itemlist.filter((item) => Satisfies(item, requirements)));
   }, [itemlist, requirements]);
 
@@ -162,9 +160,9 @@ const Search = () => {
   const [filteredItems, setFilteredItems] = useState([]);
   useEffect(() => {
     if (sortType === "top") {
-      setFilteredItems(favoritedItems.sort((a, b) => b.avg_rating - a.avg_rating));
+      setFilteredItems(favoritedItems.toSorted((a, b) => b.avg_rating - a.avg_rating));
     } else {
-      setFilteredItems(favoritedItems.sort((a, b) => b.hot_upvotes - a.hot_upvotes));
+      setFilteredItems(favoritedItems.toSorted((a, b) => b.hot_upvotes - a.hot_upvotes));
     }
   }, [sortType, favoritedItems]);
 
