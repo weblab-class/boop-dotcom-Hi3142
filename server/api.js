@@ -18,6 +18,7 @@ const auth = require("./auth");
 // api endpoints: all these paths will be prefixed with "/api/"
 const router = express.Router();
 const Review = require("./models/review");
+const MenuItem = require("./models/menuitem");
 
 //initialize socket
 const socketManager = require("./server-socket");
@@ -47,7 +48,6 @@ router.post("/initsocket", (req, res) => {
 router.get("/reviews", (req, res) => {
   Review.find({ parent_item: req.query.parent_item }).then((reviews) => {
     res.send(reviews);
-    console.log(reviews);
   });
 });
 
@@ -60,6 +60,45 @@ router.post("/review", (req, res) => {
     timestamp: req.body.timestamp,
   });
   newReview.save().then((rev) => res.send(rev));
+});
+
+router.get("/menuitems", (req, res) => {
+  MenuItem.find().then((items) => {
+    res.send(items);
+  });
+});
+
+router.post("/add-item", (req, res) => {
+  var thisItem = new MenuItem({
+    name: req.body.name,
+    location: req.body.location,
+    station: req.body.station,
+    avg_rating: req.body.avg_rating,
+    num_ratings: req.body.num_ratings,
+    hot_upvotes: req.body.hot_upvotes,
+    dietary_flags: req.body.dietary_flags,
+    meal: "beeeeekfast",
+  });
+  console.log(thisItem);
+  thisItem.save().then((rev) => res.send(rev));
+});
+
+router.post("/update-item", (req, res) => {
+  var thisItem;
+  if (!MenuItem.findOne({ name: req.body.name }).then((item) => (thisItem = item))) {
+    thisItem = new MenuItem({
+      name: req.body.name,
+      location: req.body.location,
+      station: req.body.station,
+      avg_rating: req.body.avg_rating,
+      num_ratings: req.body.num_ratings,
+      hot_upvotes: req.body.hot_upvotes,
+      dietary_flags: req.body.dietary_flags,
+      meal: "beeeeekfast",
+    });
+  }
+  console.log(thisItem);
+  thisItem.save().then((rev) => res.send(rev));
 });
 
 router.get(`/profile`, (req, res) => {

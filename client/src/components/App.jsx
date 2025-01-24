@@ -1,6 +1,7 @@
 import React, { useState, useEffect, createContext } from "react";
 import { Outlet } from "react-router-dom";
 import NavBar from "./modules/NavBar";
+import dining from "../../../dining.json";
 
 import jwt_decode from "jwt-decode";
 
@@ -23,6 +24,44 @@ const App = () => {
   const [todayItems, setTodayItems] = useState();
 
   useEffect(() => {
+    const maseehMealsToday = dining[5].meals_by_day[0].meals;
+    var maseehItems = [];
+    maseehMealsToday.forEach((element) =>
+      element.items.forEach((foodItem) => {
+        if (
+          foodItem.station !== "condiments" &&
+          foodItem.station !== "beverages" &&
+          foodItem.station !== "toppings" &&
+          foodItem.station !== "omelet" &&
+          foodItem.station !== "salad" &&
+          !maseehItems.some((item) => item.name === foodItem.name)
+        ) {
+          maseehItems.push(foodItem);
+        }
+      })
+    );
+    function getRandomRating() {
+      return Math.floor(Math.random() * 50) / 10.0;
+    }
+    function getRandomInt() {
+      return Math.floor(Math.random() * 5);
+    }
+    function getRandomId() {
+      return Math.floor(Math.random() * 500000000);
+    }
+    const formattedItems = maseehItems.map((item) => ({
+      name: item.name.replace(/(^|\s)[a-z]/gi, (l) => l.toUpperCase()),
+      location: "Maseeh",
+      station: item.station,
+      avg_rating: getRandomRating(),
+      num_ratings: getRandomInt(),
+      hot_upvotes: getRandomInt(),
+      dietary_flags: [...item.dietary_flags],
+      reviews: [],
+      _id: "msh" + getRandomId().toString,
+    }));
+    // formattedItems.forEach((item) => post("/api/add-item", item));
+
     get("/api/whoami").then((user) => {
       if (user._id) {
         // they are registed in the database, and currently logged in.

@@ -3,7 +3,7 @@ import { GoogleLogin, googleLogout } from "@react-oauth/google";
 
 import "../../utilities.css";
 import { UserContext } from "../App";
-import { get } from "../../utilities";
+import { get, post } from "../../utilities";
 import MenuItemDisplay from "../modules/menuitemdisplay.jsx";
 import Menu from "../modules/menu.jsx";
 import "./Search.css";
@@ -100,16 +100,15 @@ const Search = () => {
     reviews: [],
     _id: "gr9",
   };
+  const [itemlist, setItemList] = useState([]);
 
-  const [itemlist, setItemList] = useState([
-    myitem1,
-    myitem2,
-    myitem3,
-    myitem4,
-    myitem5,
-    myitem6,
-    myitem7,
-  ]);
+  useState(() => {
+    get("/api/menuitems").then((returnedItems) => {
+      setItemList(
+        [myitem1, myitem2, myitem3, myitem4, myitem5, myitem6, myitem7].concat(returnedItems)
+      );
+    });
+  }, []);
 
   const [userDietaryFlags, setUserDietaryFlags] = useState([]);
 
