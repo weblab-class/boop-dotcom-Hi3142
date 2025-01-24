@@ -166,17 +166,28 @@ const Search = () => {
     }
   }, [sortType, favoritedItems]);
 
+  const [prefix, setPrefix] = useState("");
+  const [matchingItems, setMatchingItems] = useState([]);
+
+  useEffect(() => {
+    setMatchingItems(
+      filteredItems.filter((item) => item.name.toLowerCase().startsWith(prefix.toLowerCase()))
+    );
+  }, [prefix, filteredItems]);
+
   const searchContextValue = {
     sortType,
     setSortType,
     favoritesOnly,
     setFavoritesOnly,
+    prefix,
+    setPrefix,
   };
 
   return (
     <>
       <SearchContext.Provider value={searchContextValue}>
-        <Menu itemlist={filteredItems} />
+        <Menu itemlist={matchingItems} />
       </SearchContext.Provider>
     </>
   );

@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { post } from "../../utilities";
 import { UserContext } from "../App";
-import { RatingReview } from "./RatingReview";
+import { RatingReview } from "./reviewstars";
 import "./newreview.css";
 
 const NewReview = (props) => {
