@@ -37,22 +37,29 @@ const NewReview = (props) => {
   };
 
   return (
-    <div className="reviewInputWrapper">
-      <input
-        type="text"
-        placeholder="Add your review"
-        value={value}
-        onChange={handleChange}
-        className="reviewInput"
-      />
-      &ensp;
-      <span className="u-alignRight">
-        <RatingReview rating={rating} setRating={setRating} />
+    <div className="container">
+      <div className="reviewInputWrapper">
+        <input
+          type="text"
+          placeholder="Add your review"
+          value={value}
+          onChange={handleChange}
+          className="reviewInput"
+        />
         &ensp;
-        <button type="submit" value="Submit" onClick={handleSubmit} className="submitButton u-bold">
-          Submit
-        </button>
-      </span>
+        <span className="u-alignRight">
+          <RatingReview rating={rating} setRating={setRating} />
+          &ensp;
+          <button
+            type="submit"
+            value="Submit"
+            onClick={handleSubmit}
+            className="submitButton u-bold"
+          >
+            Submit
+          </button>
+        </span>
+      </div>
     </div>
   );
 };
