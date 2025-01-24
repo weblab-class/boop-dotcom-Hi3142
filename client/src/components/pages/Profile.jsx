@@ -96,9 +96,9 @@ const Profile = () => {
           <h1>Hello, {user.name}!</h1>
           <div class="dropdown" onClick={() => setDropdownActive(!dropdownActive)}>
             {dropdownActive ? (
-              <span> Unmanage your dietary flags ↑ </span>
+              <span>↑ Unmanage your dietary flags </span>
             ) : (
-              <span> Click to manage your dietary flags ↓ </span>
+              <span> → Click to manage your dietary flags </span>
             )}
             <div
               class="dropdown-content"
