@@ -19,6 +19,7 @@ const NewReview = (props) => {
     event.preventDefault();
     addNewReview && addNewReview(value);
     setValue("");
+    setRating(0);
   };
 
   const addNewReview = (value) => {
