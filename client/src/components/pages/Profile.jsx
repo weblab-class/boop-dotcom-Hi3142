@@ -88,22 +88,32 @@ const Profile = () => {
     },
   ];
 
+  const [dropdownActive, setDropdownActive] = useState(false);
   return (
     <>
       {user ? (
         <div className="profile-wrapper">
           <h1>Hello, {user.name}!</h1>
-          <p>Manage your dietary flags:</p>
-          {buttons.map((button) => (
-            <div>
-              <Checkbox
-                label={button.name}
-                value={userDietaryFlags.includes(button.flag)}
-                onChange={toggleDietaryFlag(button.flag)}
-                key={button.flag}
-              />
+          <div class="dropdown" onClick={() => setDropdownActive(!dropdownActive)}>
+            <span> Click to manage your dietary flags ↓ </span>
+            <div
+              class="dropdown-content"
+              style={{
+                display: dropdownActive ? "block" : "none",
+              }}
+            >
+              {buttons.map((button) => (
+                <div>
+                  <Checkbox
+                    label={button.name}
+                    value={userDietaryFlags.includes(button.flag)}
+                    onChange={toggleDietaryFlag(button.flag)}
+                    key={button.flag}
+                  />
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
           <p>Manage favorites</p>
         </div>
       ) : (
