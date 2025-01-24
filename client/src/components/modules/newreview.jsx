@@ -38,7 +38,7 @@ const NewReview = (props) => {
   };
 
   return (
-    <div className="container">
+    <div className="reviewcontainer">
       <div className="reviewInputWrapper">
         <input
           type="text"
@@ -55,7 +55,7 @@ const NewReview = (props) => {
             type="submit"
             value="Submit"
             onClick={handleSubmit}
-            className="submitButton u-bold"
+            className="reviewSubmitButton u-bold"
           >
             Submit
           </button>

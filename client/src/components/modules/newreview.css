@@ -1,4 +1,4 @@
-.submitButton {
+.reviewSubmitButton {
   color: var(--black);
   background-color: var(--yellow);
   transition: color 0.1s, background 0.1s;
@@ -21,7 +21,8 @@
   display: flex;
 }
 
-.container {
+.reviewcontainer {
   display: flex;
   width: 100%;
+  padding: 0px;
 }
