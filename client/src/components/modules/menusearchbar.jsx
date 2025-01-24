@@ -4,6 +4,7 @@ import { get } from "../../utilities";
 import Checkbox from "./checkbox";
 
 import "./menuoptionbar.css";
+import "./menusearchbar.css";
 import { UserContext } from "../App";
 import { SearchContext } from "../pages/Search";
 
@@ -30,19 +31,26 @@ const MenuSearchBar = (props) => {
   };
 
   return (
-    <div className="reviewInputWrapper">
-      <input
-        type="text"
-        placeholder="Search for a food..."
-        value={value}
-        onChange={handleChange}
-        className="reviewInput"
-      />
-      <span className="u-alignRight">
-        <button type="submit" value="Submit" onClick={handleSubmit} className="submitButton u-bold">
-          Search
-        </button>
-      </span>
+    <div className="container">
+      <div className="searchBarWrapper">
+        <input
+          type="text"
+          placeholder="Search for a food..."
+          value={value}
+          onChange={handleChange}
+          className="searchBar"
+        />
+        <span className="u-alignRight">
+          <button
+            type="submit"
+            value="Submit"
+            onClick={handleSubmit}
+            className="submitButton u-bold"
+          >
+            Search
+          </button>
+        </span>
+      </div>
     </div>
   );
 };
