@@ -25,7 +25,7 @@
 
 .NavBar-link.NavBar-login {
   opacity: 1;
-  color: black;
+  color: var(--black);
 }
 
 .NavBar-link + .NavBar-link {

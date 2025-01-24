@@ -1,7 +1,7 @@
 .menuItemWrap {
   display: flex;
   border-style: solid;
-  border-color: rgb(247, 72, 87);
+  border-color: var(--red);
   justify-content: space-between;
   margin: 5px 0px;
   padding: 0px 10px;

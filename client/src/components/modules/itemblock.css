@@ -1,6 +1,6 @@
 .collapsible {
-  background-color: #1e1e1efe;
-  color: #444;
+  background-color: var(--primary--dim);
+  color: var(--primary);
   cursor: pointer;
   width: 100%;
   border: none;
@@ -13,12 +13,12 @@
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active,
 .collapsible:hover {
-  background-color: #2e2e2e;
+  background-color: var(--primary);
 }
 
 /* Style the collapsible content. Note: hidden by default */
 .content {
   padding: 0px;
-  background-color: rgb(52, 52, 52);
+  background-color: var(--primary);
   overflow: scroll;
 }

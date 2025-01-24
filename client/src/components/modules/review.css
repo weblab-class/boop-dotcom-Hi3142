@@ -1,6 +1,6 @@
 .reviewWrap1 {
   border-style: solid;
-  border-color: rgb(72, 247, 145);
+  border-color: var(--green);
   padding: 0px 10px;
 }
 
@@ -14,9 +14,9 @@
 }
 
 .rating {
-  color: rgb(255, 221, 0);
+  color: var(--yellow);
 }
 
 .reviewText {
-  color: rgb(196, 196, 196);
+  color: var(--grey);
 }

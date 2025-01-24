@@ -1,6 +1,6 @@
 .submitButton {
-  color: rgb(0, 0, 0);
-  background-color: rgb(179, 222, 255);
+  color: var(--black);
+  background-color: var(--light--blue);
   transition: color 0.1s, background 0.1s;
 }
 
@@ -14,9 +14,9 @@
   flex-grow: 1;
   padding: 5px;
   margin: 0px 10px 0px 0px;
-  border: rgb(179, 222, 255) 2px solid;
+  border: var(--light--blue) 2px solid;
   font-size: large;
-  color: white;
+  color: var(--white);
   display: flex;
   background-color: rgb(37, 46, 81);
 }
@@ -24,9 +24,9 @@
 .searchBar {
   box-shadow: none;
   text-shadow: none;
-  color: rgb(255, 255, 255);
+  color: var(--white);
   display: inline-block;
   max-width: 100%;
   flex-grow: 1;
-  background-color: rgb(41, 46, 65);
+  background-color: var(--primary);
 }
