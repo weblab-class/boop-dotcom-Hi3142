@@ -13,7 +13,7 @@ const NavBar = (props) => {
       <div className="NavBar-title u-inlineBlock">Bone Apple Tea :)</div>
       <div className="NavBar-linkContainer u-inlineBlock">
         <Link to="/" className="NavBar-link">
-          Home (Skeleton)
+          Home (Search)
         </Link>
         <Link to="/search/" className="NavBar-link u-inlineBlock">
           Search
