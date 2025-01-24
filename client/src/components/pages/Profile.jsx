@@ -100,6 +100,7 @@ const Profile = () => {
                 label={button.name}
                 value={userDietaryFlags.includes(button.flag)}
                 onChange={toggleDietaryFlag(button.flag)}
+                key={button.flag}
               />
             </div>
           ))}
