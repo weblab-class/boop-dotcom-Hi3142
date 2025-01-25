@@ -1,33 +1,95 @@
-.NavBar-container {
-  padding: var(--s) var(--m);
-  background-color: var(--primary);
+.navbar {
+  position: relative;
+  background: linear-gradient(45deg, #5619ff, #340f99); /* Example Gradient */
+  height: 80px; /* Adjust as needed */
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
 }
 
-.NavBar-title {
-  color: var(--white);
+.navbar-title {
+  color: white;
   font-size: 30px;
+  font-weight: bold;
 }
 
-.NavBar-linkContainer {
-  margin-left: var(--l);
+/* Navigation Menu */
+.nav-menu {
+  position: absolute;
+  bottom: 40%; /* Centers the circles vertically relative to the navbar */
+  right: 20px;
+  display: flex;
+  transform: translateY(60%); /* Pushes the circles downward */
 }
 
-.NavBar-link,
-.NavBar-link:visited {
-  color: var(--white);
-  opacity: 0.6;
+/* Circle Buttons */
+.nav-circle {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
   text-decoration: none;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out; /* Ensures circles stay above other elements */
 }
 
-.NavBar-link:hover {
-  opacity: 0.8;
+.nav-circle-search {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(45deg, #ffb800, #ff5c87);
+  position: absolute;
+  top: -10px;
+  right: 0px;
+  z-index: 10;
 }
 
-.NavBar-link.NavBar-login {
-  opacity: 1;
-  color: var(--black);
+.nav-circle-profile {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(45deg, #338bff, #ff3ddf);
+  bottom: -40px;
+  position: absolute;
+  right: 70px;
+  z-index: 6;
 }
 
-.NavBar-link + .NavBar-link {
-  margin-left: var(--m);
+.nav-circle-home {
+  width: 65px;
+  height: 65px;
+  background: linear-gradient(45deg, #0f0ff7, #ff3dab);
+  position: absolute;
+  right: 130px;
+  top: -10px;
+  z-index: 12;
+}
+
+/* Bouncing Effect on Hover */
+.nav-circle:hover {
+  animation: bounce 0.3s ease-in-out infinite alternate;
+}
+
+.googlelogin {
+  all: unset;
+}
+
+/* Bouncing Animation */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Active and Inactive Styles */
+.active-page {
+  background: linear-gradient(45deg, #ffb800, #ff5c87); /* Yellow-Orange */
+}
+
+.inactive-page {
+  background: linear-gradient(45deg, #8d33ff, #ff3d6e); /* Purple-Pink */
 }

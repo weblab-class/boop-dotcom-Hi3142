@@ -8,36 +8,32 @@ import "./NavBar.css";
  * The navigation bar at the top of all pages. Takes no props.
  */
 const NavBar = (props) => {
+  //const [activePage, setActivePage] = useState("search");
+
   return (
-    <nav className="NavBar-container ">
-      <div className="NavBar-title u-inlineBlock">Bone Apple Tea :)</div>
-      <div className="NavBar-linkContainer u-inlineBlock">
-        <Link to="/" className="NavBar-link">
-          Home (Search)
+    <div className="navbar">
+      <div className="navbar-title">Bone Apple Tea</div>
+      <div className="nav-menu">
+        <Link to={`/profile/${props.userId}`} className="nav-circle nav-circle-profile">
+          Me
         </Link>
-        <Link to="/search/" className="NavBar-link u-inlineBlock">
+        <Link to="/search/" className="nav-circle nav-circle-search">
           Search
         </Link>
-        <Link to={`/profile/${props.userId}`} className="NavBar-link u-inlineBlock">
-          Profile
-        </Link>
+        <div className="nav-circle nav-circle-home">
+          {props.userId ? (
+            <button onClick={props.handleLogout}>Sign out</button>
+          ) : (
+            <GoogleLogin
+              text="signing_with"
+              onSuccess={props.handleLogin}
+              onFailure={(err) => console.log(err)}
+              containerProps={{ className: "googlelogin" }}
+            />
+          )}
+        </div>
       </div>
-      <div className="u-alignRight u-inlineBlock">
-        {props.userId ? (
-          <button className="NavBar-link NavBar-login u-inlineBlock" onClick={props.handleLogout}>
-            Sign out
-          </button>
-        ) : (
-          <GoogleLogin
-            text="signin_with"
-            onSuccess={props.handleLogin}
-            onFailure={(err) => console.log(err)}
-            containerProps={{ className: "NavBar-link NavBar-login u-inlineBlock" }}
-          />
-        )}
-      </div>
-    </nav>
+    </div>
   );
 };
-
 export default NavBar;
