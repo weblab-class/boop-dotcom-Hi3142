@@ -18,20 +18,25 @@ const NavBar = (props) => {
           to={`/profile/${props.userId}`}
           className="u-circular-button nav-circle nav-circle-profile"
         >
-          Me
+          ME
         </Link>
         <Link to="/search/" className="u-circular-button nav-circle nav-circle-search">
           🔎
         </Link>
         <div className="u-circular-button nav-circle nav-circle-home">
           {props.userId ? (
-            <button onClick={props.handleLogout}>Sign out</button>
+            <button onClick={props.handleLogout} className="signout">
+              LOG OUT
+            </button>
           ) : (
             <GoogleLogin
-              text="signing_with"
               onSuccess={props.handleLogin}
               onFailure={(err) => console.log(err)}
               containerProps={{ className: "googlelogin" }}
+              type="icon"
+              theme="filled_blue"
+              size="large"
+              shape="circle"
             />
           )}
         </div>

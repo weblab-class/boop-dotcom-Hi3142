@@ -129,7 +129,7 @@ form {
 
 /* Bouncing Effect on Hover */
 .u-circular-button:hover {
-  animation: bounce 0.3s ease-in-out infinite alternate;
+  animation: bounce 0.4s ease-in-out;
 }
 
 /* Bouncing Animation */
@@ -137,8 +137,17 @@ form {
   0% {
     transform: translateY(0);
   }
-  100% {
+  25% {
+    transform: translateY(-8px);
+  }
+  50% {
     transform: translateY(-10px);
+  }
+  75% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 

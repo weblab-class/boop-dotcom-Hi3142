@@ -58,21 +58,6 @@
   z-index: 12;
 }
 
-/* Bouncing Effect on Hover */
-.nav-circle:hover {
-  animation: bounce 0.3s ease-in-out infinite alternate;
-}
-
-/* Bouncing Animation */
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-10px);
-  }
-}
-
 /* Active and Inactive Styles */
 .active-page {
   background: linear-gradient(45deg, #ffb800, #ff5c87); /* Yellow-Orange */
@@ -80,4 +65,19 @@
 
 .inactive-page {
   background: linear-gradient(45deg, #8d33ff, #ff3d6e); /* Purple-Pink */
+}
+
+.signout {
+  padding: 10px 20px;
+  border-radius: 999px;
+  color: white;
+  background: none;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  border: none;
+  align-items: center;
+  font-weight: 600;
+  width: 70px;
+  height: 70px;
 }
