@@ -60,11 +60,17 @@ const MenuItemDisplay = (props) => {
         <div className="right-aligned">
           {userId && (
             <p>
-              <Checkbox label="Favorite?" value={checked} onChange={handleChange} />
+              <Checkbox
+                label="♥︎"
+                value={checked}
+                onChange={handleChange}
+                style={{
+                  color: checked ? "#ffb800" : "#9115a7",
+                }}
+              />
             </p>
           )}
-          <p>Rating: {props.menuitem.avg_rating}</p>
-          <p>Hot: {props.menuitem.hot_upvotes}</p>
+          <p>★ {props.menuitem.avg_rating}</p>
         </div>
       </div>
     </div>

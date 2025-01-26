@@ -9,16 +9,15 @@ export function RatingReview({ rating, setRating }) {
             className="start"
             style={{
               cursor: "pointer",
-              color: rating >= star ? "gold" : "gray",
-              fontSize: `15px`,
+              color: rating >= star ? "#ffb800" : "#9115a7",
+              fontSize: `25px`,
             }}
             onClick={() => {
               setRating(star);
             }}
             key={star}
           >
-            {" "}
-            ★{" "}
+            ★
           </span>
         );
       })}
