@@ -1,21 +1,27 @@
 .reviewSubmitButton {
-  color: var(--black);
-  background-color: var(--yellow);
+  color: var(--white);
+  font-size: 60px;
+  font-weight: 200;
   transition: color 0.1s, background 0.1s;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(45deg, var(--orange), var(--pink));
 }
 
 .reviewInput {
-  background-color: var(--primary--dim);
+  all: unset;
+  background: linear-gradient(90deg, var(--mid--navy), var(--mid--magenta));
+  padding: 10px;
+  border-radius: 100px;
   color: var(--white);
+  opacity: 100%;
   display: inline-block;
-  max-width: 100%;
   flex-grow: 1;
 }
 
 .reviewInputWrapper {
   flex-grow: 1;
-  padding: 5px;
-  border: var(--yellow) 2px solid;
   font-size: medium;
   color: var(--white);
   display: flex;
@@ -24,5 +30,6 @@
 .reviewcontainer {
   display: flex;
   width: 100%;
-  padding: 0px;
+  margin-top: 5px;
+  padding: 5px;
 }

@@ -29,7 +29,7 @@ const MenuOptionBar = (props) => {
       &ensp;
       <div className={`singleOption ${sortType === "top" ? "single-option-active" : ""}`}>
         <Checkbox
-          label="Top"
+          label="TOP"
           value={sortType === "top"}
           onChange={setTop}
           className="hidden-checkbox"
@@ -37,14 +37,14 @@ const MenuOptionBar = (props) => {
       </div>
       &ensp;
       <div className={`singleOption ${sortType === "hot" ? "single-option-active" : ""}`}>
-        <Checkbox label="Hot" value={sortType === "hot"} onChange={setHot}></Checkbox>
+        <Checkbox label="HOT" value={sortType === "hot"} onChange={setHot}></Checkbox>
       </div>
       &ensp;
       <div className={`singleOption ${favoritesOnly ? "single-option-active" : ""}`}>
         {userId && (
           <>
             <Checkbox
-              label="Favorites Only"
+              label="FAVORITES ONLY"
               value={favoritesOnly}
               onChange={toggleFavorites}
             ></Checkbox>

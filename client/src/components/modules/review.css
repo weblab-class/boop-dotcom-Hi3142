@@ -1,22 +1,21 @@
 .reviewWrap1 {
-  border-style: solid;
-  border-color: var(--green);
   padding: 0px 10px;
-}
-
-.reviewWrap {
   display: flex;
+  gap: 5px;
+  margin: 3px 0px;
 }
 
 .userName {
   font-weight: 800;
-  text-decoration: underline;
+  margin: 3px 0px;
 }
 
 .rating {
   color: var(--yellow);
+  margin: 3px 0px;
 }
 
 .reviewText {
   color: var(--grey);
+  margin: 3px 0px;
 }

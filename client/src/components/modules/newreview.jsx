@@ -48,18 +48,17 @@ const NewReview = (props) => {
           className="reviewInput"
         />
         &ensp;
-        <span className="u-alignRight">
-          <RatingReview rating={rating} setRating={setRating} />
-          &ensp;
-          <button
-            type="submit"
-            value="Submit"
-            onClick={handleSubmit}
-            className="reviewSubmitButton u-bold"
-          >
-            Submit
-          </button>
-        </span>
+        <button
+          type="submit"
+          value="Submit"
+          onClick={handleSubmit}
+          className="reviewSubmitButton u-circular-button"
+        >
+          +
+        </button>
+        &ensp;
+        <RatingReview rating={rating} setRating={setRating} />
+        &emsp;
       </div>
     </div>
   );

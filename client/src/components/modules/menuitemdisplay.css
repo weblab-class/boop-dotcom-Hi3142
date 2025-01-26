@@ -1,24 +1,40 @@
 .menuItemWrap {
   display: flex;
-  border-style: solid;
-  border-color: var(--red);
   justify-content: space-between;
-  margin: 5px 0px;
-  padding: 0px 10px;
+  padding: 1px 15px;
+  font-size: 16px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--vivid--navy), var(--dark--magenta));
+
+  font-family: "Josefin Sans", serif;
+  font-weight: 380;
+  height: 50px;
+  align-items: center;
 }
 
 .left-aligned {
-  display: flex;
-  justify-content: flex-start;
   gap: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .right-aligned {
-  display: flex;
-  justify-content: right;
   gap: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .itemName {
   font-weight: bold;
 }
+.active,
+.menuItemWrap:hover {
+  background: linear-gradient(90deg, var(--mid--navy), var(--mid--magenta));
+}
+
+/*  --vivid--navy: #26243e;
+  --dark--magenta: #45284b;
+  --mid--navy: #2e21a4;
+  --mid--magenta: #9115a7;
+  --light--navy: #6f64d2;
+  --light--magenta: #c248d7;*/

@@ -8,16 +8,13 @@ import "./review.css";
 const Review = (props) => {
   return (
     <div className="reviewWrap1">
-      <div className="reviewWrap">
-        <p className="userName">{props.reviewobj.poster_name} | </p>
-        {props.reviewobj.rating > 1 ? (
-          <p className="rating"> {props.reviewobj.rating} stars</p>
-        ) : (
-          <p className="rating"> {props.reviewobj.rating} star</p>
-        )}
-      </div>
-      <hr />
-      <p className="reviewText">{props.reviewobj.review_text}</p>
+      <p className="userName">{props.reviewobj.poster_name}: </p>
+      {props.reviewobj.rating > 1 ? (
+        <p className="rating"> {props.reviewobj.rating} stars</p>
+      ) : (
+        <p className="rating"> {props.reviewobj.rating} star</p>
+      )}
+      <p className="reviewText"> | {props.reviewobj.review_text}</p>
     </div>
   );
 };

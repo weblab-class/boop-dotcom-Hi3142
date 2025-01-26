@@ -35,7 +35,7 @@ const ItemBlock = (props) => {
     <div>
       {/* Collapsible button */}
       <button onClick={toggleContent} className={`collapsible ${isOpen ? "active" : ""}`}>
-        <MenuItemDisplay menuitem={props.menuitem} />
+        <MenuItemDisplay menuitem={props.menuitem} isOpen={isOpen} />
       </button>
 
       {/* Collapsible content with dynamic maxHeight */}

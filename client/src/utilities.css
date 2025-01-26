@@ -23,10 +23,16 @@
   --blue: #338bff;
   --pink: #ff3ddf;
   --orange: #ffb800;
+  --vivid--navy: #26243e;
+  --dark--magenta: #45284b;
+  --mid--navy: #2e21a4;
+  --mid--magenta: #9115a7;
+  --light--navy: #6f64d2;
+  --light--magenta: #c248d7;
   --primary: rgb(41, 41, 41);
   --primary--dim: rgb(29, 29, 29);
   --yellow: rgb(255, 221, 0);
-  --green: rgb(72, 247, 145);
+  --green: #48f791;
   --light--blue: rgb(179, 222, 255);
   --darkgrey: #d4d4d4;
   --medgrey: #e0e0e0;

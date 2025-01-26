@@ -5,9 +5,8 @@
 }
 
 .singleOption {
-  all: unset;
   padding: 5px 15px;
-  font-size: 18px;
+  font-size: 16px;
   border-radius: 999px;
   height: 20px;
   background-color: var(--white);
@@ -15,6 +14,7 @@
   font-family: "Josefin Sans", serif;
   top: 15px;
   left: -10px;
+  font-weight: 380;
 }
 
 .single-option-active {

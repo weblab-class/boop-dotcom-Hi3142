@@ -50,7 +50,7 @@ const MenuItemDisplay = (props) => {
 
   return (
     <div>
-      <div className="menuItemWrap">
+      <div className={`menuItemWrap ${props.isOpen ? "active" : ""}`}>
         <div className="left-aligned">
           <p className="itemName">{props.menuitem.name}</p>
           <p>
