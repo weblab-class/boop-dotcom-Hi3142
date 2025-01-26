@@ -31,26 +31,22 @@ const MenuSearchBar = (props) => {
   };
 
   return (
-    <div className="container">
-      <div className="searchBarWrapper">
-        <input
-          type="text"
-          placeholder="Search for a food..."
-          value={value}
-          onChange={handleChange}
-          className="searchBar"
-        />
-        <span className="u-alignRight">
-          <button
-            type="submit"
-            value="Submit"
-            onClick={handleSubmit}
-            className="submitButton u-bold"
-          >
-            Search
-          </button>
-        </span>
-      </div>
+    <div className="searchBarContainer">
+      <button
+        type="submit"
+        value="Submit"
+        onClick={handleSubmit}
+        className="submitButton u-circular-button"
+      >
+        🔎
+      </button>
+      <input
+        type="text"
+        placeholder="Search for a food..."
+        value={value}
+        onChange={handleChange}
+        className="searchBar"
+      />
     </div>
   );
 };

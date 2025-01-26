@@ -15,9 +15,9 @@
 */
 
 /* TODO: REPLACE WITH YOUR OWN FONT! */
-@import url("https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 :root {
+  --background: #222228;
   --primary: rgb(41, 41, 41);
   --primary--dim: rgb(29, 29, 29);
   --red: rgb(247, 72, 87);
@@ -39,9 +39,12 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  background: var(--primary--dim);
+  font-family: "Josefin Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background: var(--background);
+  color: white;
 }
 
 form {
@@ -97,4 +100,34 @@ form {
 
 .u-alignRight {
   float: right;
+}
+
+.u-circular-button {
+  border-radius: 50%;
+  font-family: "Josefin Sans", serif;
+  background: (45deg, #0f0ff7, #ff3dab);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out; /* Ensures circles stay above other elements */
+}
+
+/* Bouncing Effect on Hover */
+.u-circular-button:hover {
+  animation: bounce 0.3s ease-in-out infinite alternate;
+}
+
+/* Bouncing Animation */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }

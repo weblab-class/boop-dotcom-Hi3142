@@ -1,32 +1,31 @@
 .submitButton {
-  color: var(--black);
-  background-color: var(--light--blue);
+  background: linear-gradient(45deg, #0f0ff7, #ff3dab);
   transition: color 0.1s, background 0.1s;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  z-index: 10;
 }
 
-.container {
-  display: flex;
+.searchBarContainer {
   width: 100%;
-  padding: 5px;
-}
-
-.searchBarWrapper {
-  flex-grow: 1;
-  padding: 5px;
-  margin: 0px 10px 0px 0px;
-  border: var(--light--blue) 2px solid;
-  font-size: large;
-  color: var(--white);
   display: flex;
-  background-color: rgb(37, 46, 81);
+  height: 60px;
 }
 
 .searchBar {
-  box-shadow: none;
-  text-shadow: none;
-  color: var(--white);
-  display: inline-block;
-  max-width: 100%;
+  all: unset;
+  padding: 10px 15px;
+  font-size: 18px;
+  border-radius: 45px;
+  height: 25px;
+  background-color: var(--white);
+  color: var(--black);
+  font-family: "Josefin Sans", serif;
   flex-grow: 1;
-  background-color: var(--primary);
+  position: relative;
+  top: 15px;
+  left: -10px;
 }

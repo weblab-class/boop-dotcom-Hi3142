@@ -1,9 +1,6 @@
-section {
-  background-color: var(--primary--dim);
-  color: var(--white);
+.menuBox {
   padding: 20px;
 }
-
 .menuTitle {
   font-size: 60px;
   padding: 20px 0 10px 10px;

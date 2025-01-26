@@ -13,10 +13,10 @@ Holds all the menuitems in response to a search for display
 */
 const Menu = (props) => {
   return (
-    <section className="menuWrapper">
-      <div className="menuTitle">MENU</div>
-      <MenuOptionBar />
+    <section className="menuBox">
+      <div className="menuTitle">SEARCH</div>
       <MenuSearchBar />
+      <MenuOptionBar />
       {props.itemlist.length > 0 ? (
         <div className="itemArray">
           {" "}
