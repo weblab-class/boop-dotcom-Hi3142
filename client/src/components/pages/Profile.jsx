@@ -94,30 +94,31 @@ const Profile = () => {
       {user ? (
         <div className="profile-wrapper">
           <h1>Hello, {user.name}!</h1>
-          <div className="u-dropdown" onClick={() => setDropdownActive(!dropdownActive)}>
+          <div className="collapsible" onClick={() => setDropdownActive(!dropdownActive)}>
             {dropdownActive ? (
               <span>↑ Unmanage your dietary flags </span>
             ) : (
               <span> → Click to manage your dietary flags </span>
             )}
-            <div
-              className="u-dropdown-content profile-dropdown-content"
-              style={{
-                display: dropdownActive ? "block" : "none",
-              }}
-            >
-              {buttons.map((button) => (
-                <div>
-                  <Checkbox
-                    label={button.name}
-                    value={userDietaryFlags.includes(button.flag)}
-                    onChange={toggleDietaryFlag(button.flag)}
-                    key={button.flag}
-                  />
-                </div>
-              ))}
-            </div>
           </div>
+          <div
+            className="profile-dropdown-content"
+            style={{
+              display: dropdownActive ? "block" : "none",
+            }}
+          >
+            {buttons.map((button) => (
+              <div>
+                <Checkbox
+                  label={button.name}
+                  value={userDietaryFlags.includes(button.flag)}
+                  onChange={toggleDietaryFlag(button.flag)}
+                  key={button.flag}
+                />
+              </div>
+            ))}
+          </div>
+
           <p>Manage favorites</p>
         </div>
       ) : (
