@@ -18,9 +18,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 :root {
   --background: #222228;
+  --navy: #0f0ff7;
+  --red: #ff3dab;
+  --blue: #338bff;
+  --pink: #ff3ddf;
+  --orange: #ffb800;
   --primary: rgb(41, 41, 41);
   --primary--dim: rgb(29, 29, 29);
-  --red: rgb(247, 72, 87);
   --yellow: rgb(255, 221, 0);
   --green: rgb(72, 247, 145);
   --light--blue: rgb(179, 222, 255);
