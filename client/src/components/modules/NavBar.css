@@ -30,7 +30,7 @@
 .nav-circle-search {
   width: 100px;
   height: 100px;
-  background: linear-gradient(45deg, var(--orange), var(--red));
+  background: linear-gradient(135deg, var(--blue), var(--purple));
   position: absolute;
   top: -10px;
   right: 0px;
@@ -41,7 +41,7 @@
 .nav-circle-profile {
   width: 80px;
   height: 80px;
-  background: linear-gradient(45deg, var(--blue), var(--pink));
+  background: linear-gradient(135deg, var(--grape), var(--pink));
   bottom: -40px;
   position: absolute;
   right: 70px;
@@ -51,7 +51,7 @@
 .nav-circle-home {
   width: 65px;
   height: 65px;
-  background: linear-gradient(45deg, var(--navy), var(--red));
+  background: linear-gradient(135deg, var(--purple), var(--cherry));
   position: absolute;
   right: 130px;
   top: -10px;
@@ -60,7 +60,7 @@
 
 /* Active and Inactive Styles */
 .active-page {
-  background: linear-gradient(45deg, #ffb800, #ff5c87); /* Yellow-Orange */
+  background: linear-gradient(45deg, var(--orange), var(--red)); /* Yellow-Orange */
 }
 
 .inactive-page {

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { GoogleLogin } from "@react-oauth/google";
+import { useState } from "react";
 
 import "./NavBar.css";
 
@@ -8,21 +9,42 @@ import "./NavBar.css";
  * The navigation bar at the top of all pages. Takes no props.
  */
 const NavBar = (props) => {
-  //const [activePage, setActivePage] = useState("search");
+  const [activePage, setActivePage] = useState("search");
 
   return (
     <div className="navbar">
       <div className="navbar-title">🦴🍎🍵</div>
       <div className="nav-menu">
-        <Link
-          to={`/profile/${props.userId}`}
-          className="u-circular-button nav-circle nav-circle-profile"
+        <div
+          onClick={() => {
+            setActivePage("profile");
+            console.log(activePage);
+          }}
         >
-          ME
-        </Link>
-        <Link to="/search/" className="u-circular-button nav-circle nav-circle-search">
-          🔎
-        </Link>
+          <Link
+            to={`/profile/${props.userId}`}
+            className={`u-circular-button nav-circle nav-circle-profile ${
+              activePage === "profile" ? "active-page" : ""
+            }`}
+          >
+            ME
+          </Link>
+        </div>
+        <div
+          onClick={() => {
+            setActivePage("search");
+            console.log(activePage);
+          }}
+        >
+          <Link
+            to="/search/"
+            className={`u-circular-button nav-circle nav-circle-search ${
+              activePage === "search" ? "active-page" : ""
+            }`}
+          >
+            🔎
+          </Link>
+        </div>
         <div className="u-circular-button nav-circle nav-circle-home">
           {props.userId ? (
             <button onClick={props.handleLogout} className="signout">
