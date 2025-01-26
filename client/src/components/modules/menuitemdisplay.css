@@ -4,7 +4,7 @@
   padding: 1px 15px;
   font-size: 16px;
   border-radius: 999px;
-  background: linear-gradient(90deg, var(--vivid--navy), var(--dark--magenta));
+  background: linear-gradient(90deg, var(--dark--navy), var(--dark--magenta));
 
   font-family: "Josefin Sans", serif;
   font-weight: 380;
@@ -32,10 +32,3 @@
 .menuItemWrap:hover {
   background: linear-gradient(90deg, var(--mid--navy), var(--mid--magenta));
 }
-
-/*  --vivid--navy: #26243e;
-  --dark--magenta: #45284b;
-  --mid--navy: #2e21a4;
-  --mid--magenta: #9115a7;
-  --light--navy: #6f64d2;
-  --light--magenta: #c248d7;*/

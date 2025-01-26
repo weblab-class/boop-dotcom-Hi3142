@@ -23,19 +23,12 @@
   --blue: #338bff;
   --pink: #ff3ddf;
   --orange: #ffb800;
-  --vivid--navy: #26243e;
+  --dark--navy: #26243e;
   --dark--magenta: #45284b;
   --mid--navy: #2e21a4;
   --mid--magenta: #9115a7;
   --light--navy: #6f64d2;
   --light--magenta: #c248d7;
-  --primary: rgb(41, 41, 41);
-  --primary--dim: rgb(29, 29, 29);
-  --yellow: rgb(255, 221, 0);
-  --green: #48f791;
-  --light--blue: rgb(179, 222, 255);
-  --darkgrey: #d4d4d4;
-  --medgrey: #e0e0e0;
   --grey: #f7f7f7;
   --white: #fff;
   --black: rgb(0, 0, 0);
@@ -99,13 +92,13 @@ form {
 }
 
 .u-link {
-  color: var(--primary);
+  color: var(--blue);
   text-decoration: none;
   cursor: pointer;
 }
 
 .u-link:hover {
-  color: var(--primary--dim);
+  color: var(--light--magenta);
 }
 
 .u-alignRight {
@@ -151,17 +144,25 @@ form {
   }
 }
 
-.u-dropdown {
-  position: relative;
-  display: inline-block;
+.collapsible {
+  all: unset;
+  background-color: var(--background);
+  color: var(--white);
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  border-radius: 25px;
+  padding: none;
 }
 
-.u-dropdown-content {
-  display: none;
-  position: relative;
-  z-index: 1;
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background: linear-gradient(90deg, var(--mid--navy), var(--mid--magenta));
 }
-
-.u-dropdown:hover .u-dropdown-content {
-  display: block;
+.collapsible:hover {
+  background: linear-gradient(90deg, var(--mid--navy), var(--mid--magenta));
 }
