@@ -94,14 +94,14 @@ const Profile = () => {
       {user ? (
         <div className="profile-wrapper">
           <h1>Hello, {user.name}!</h1>
-          <div class="dropdown" onClick={() => setDropdownActive(!dropdownActive)}>
+          <div className="u-dropdown" onClick={() => setDropdownActive(!dropdownActive)}>
             {dropdownActive ? (
               <span>↑ Unmanage your dietary flags </span>
             ) : (
               <span> → Click to manage your dietary flags </span>
             )}
             <div
-              class="dropdown-content"
+              className="u-dropdown-content profile-dropdown-content"
               style={{
                 display: dropdownActive ? "block" : "none",
               }}

@@ -27,32 +27,35 @@ const MenuOptionBar = (props) => {
     <section className="optionBarWrapper">
       <div>Sort by:</div>
       &ensp;
-      <div className={`singleOption ${sortType === "top" ? "single-option-active" : ""}`}>
-        <Checkbox
-          label="Top"
-          value={sortType === "top"}
-          onChange={setTop}
-          className="hidden-checkbox"
-        ></Checkbox>
+      <div className="singleOption" onClick={setTop} value={sortType === "top"}>
+        Top
       </div>
       &ensp;
-      <div className={`singleOption ${sortType === "hot" ? "single-option-active" : ""}`}>
-        <Checkbox label="Hot" value={sortType === "hot"} onChange={setHot}></Checkbox>
+      <div className="singleOption" onClick={setTop} value={sortType === "top"}>
+        Hot
       </div>
+      <Checkbox
+        label="Top"
+        value={sortType === "top"}
+        onChange={setTop}
+        className="singleOption"
+      ></Checkbox>
+      <Checkbox label="Hot" value={sortType === "hot"} onChange={setHot}></Checkbox>
+      {/*
       &ensp;
-      <div className={`singleOption ${favoritesOnly ? "single-option-active" : ""}`}>
-        {userId && (
-          <>
-            <Checkbox
-              label="Favorites Only"
-              value={favoritesOnly}
-              onChange={toggleFavorites}
-            ></Checkbox>
-          </>
-        )}
-      </div>
+      <Checkbox label="Hot" value={sortType === "hot"} onChange={setHot}></Checkbox>
+      {userId && (
+        <>
+          &emsp; &emsp;
+          <Checkbox
+            label="Favorites Only"
+            value={favoritesOnly}
+            onChange={toggleFavorites}
+          ></Checkbox>
+        </>
+      )}*/}
     </section>
   );
 };
 
-export default MenuOptionBar;
+//export default MenuOptionBar;

@@ -1,3 +1,31 @@
 .optionBarWrapper {
-  padding: 0px 0px 20px 15px;
+  padding: 10px 0px 20px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.singleOption {
+  all: unset;
+  padding: 5px 15px;
+  font-size: 18px;
+  border-radius: 999px;
+  height: 20px;
+  background-color: var(--white);
+  color: var(--black);
+  font-family: "Josefin Sans", serif;
+  top: 15px;
+  left: -10px;
+}
+
+.single-option-active {
+  background: linear-gradient(45deg, var(--navy), var(--red));
+  color: var(--white);
+}
+
+.hidden-checkbox {
+  all: unset;
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }

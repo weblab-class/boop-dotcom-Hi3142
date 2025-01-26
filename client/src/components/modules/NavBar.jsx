@@ -12,7 +12,7 @@ const NavBar = (props) => {
 
   return (
     <div className="navbar">
-      <div className="navbar-title">Bone Apple Tea</div>
+      <div className="navbar-title">🦴🍎🍵</div>
       <div className="nav-menu">
         <Link
           to={`/profile/${props.userId}`}
@@ -21,7 +21,7 @@ const NavBar = (props) => {
           Me
         </Link>
         <Link to="/search/" className="u-circular-button nav-circle nav-circle-search">
-          Search
+          🔎
         </Link>
         <div className="u-circular-button nav-circle nav-circle-home">
           {props.userId ? (

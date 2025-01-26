@@ -135,3 +135,18 @@ form {
     transform: translateY(-10px);
   }
 }
+
+.u-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.u-dropdown-content {
+  display: none;
+  position: relative;
+  z-index: 1;
+}
+
+.u-dropdown:hover .u-dropdown-content {
+  display: block;
+}
