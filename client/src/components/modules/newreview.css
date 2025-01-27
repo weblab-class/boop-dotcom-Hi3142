@@ -18,6 +18,8 @@
   opacity: 100%;
   display: inline-block;
   flex-grow: 1;
+  justify-content: center;
+  align-items: center;
 }
 
 .reviewInputWrapper {
@@ -25,6 +27,7 @@
   font-size: medium;
   color: var(--white);
   display: flex;
+  align-items: center;
 }
 
 .reviewcontainer {
@@ -32,4 +35,10 @@
   width: 100%;
   margin-top: 5px;
   padding: 5px;
+  color: white;
+  align-items: center;
+}
+
+#reviewInput::placeholder {
+  color: #8a6bf0; /* Light gray color for the placeholder text */
 }

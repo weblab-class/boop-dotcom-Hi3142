@@ -47,6 +47,7 @@ const NewReview = (props) => {
           value={value}
           onChange={handleChange}
           className="reviewInput"
+          id="reviewInput"
         />
         &ensp;
         <button
