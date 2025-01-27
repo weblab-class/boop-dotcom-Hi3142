@@ -90,12 +90,18 @@ const App = () => {
     console.log(`Logged in as ${decodedCredential.name}`);
     post("/api/login", { token: userToken }).then((user) => {
       setUserId(user._id);
+      setUserName(user.name);
+      setUserFavorites(user.favorites);
+      setuserDietaryFlags(user.dietary_flags);
       post("/api/initsocket", { socketid: socket.id });
     });
   };
 
   const handleLogout = () => {
     setUserId(undefined);
+    setUserName("Anonymous User");
+    setUserFavorites([]);
+    setuserDietaryFlags([]);
     post("/api/logout");
   };
 
