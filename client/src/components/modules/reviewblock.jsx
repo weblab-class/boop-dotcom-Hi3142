@@ -11,7 +11,6 @@ const ReviewBlock = (props) => {
       props.setReviews(props.reviews.filter((review) => review._id !== reviewId));
     });
   };
-  // console.log(props);
 
   const addReview = (reviewObj) => {
     props.setReviews(props.reviews.concat([reviewObj]));
@@ -20,13 +19,15 @@ const ReviewBlock = (props) => {
   return (
     <div className="reviewBlockWrapper">
       <NewReview parent_item={props.menuitem._id} addReview={addReview} />
-      {props.reviews.map((review) => (
-        <Review
-          reviewobj={review}
-          key={`review_${review._id}`}
-          removeThisReview={() => removeReview(review._id)}
-        />
-      ))}
+      {props.reviews
+        .toSorted((a, b) => Date.parse(b.timestamp) - Date.parse(a.timestamp))
+        .map((review) => (
+          <Review
+            reviewobj={review}
+            key={`review_${review._id}`}
+            removeThisReview={() => removeReview(review._id)}
+          />
+        ))}
     </div>
   );
 };

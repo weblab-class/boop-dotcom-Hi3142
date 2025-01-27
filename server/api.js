@@ -53,6 +53,7 @@ router.get("/reviews", (req, res) => {
 
 router.post("/add-review", (req, res) => {
   const newReview = new Review({
+    poster_id: req.body.poster_id,
     poster_name: req.body.poster_name,
     parent_item: req.body.parent_item,
     review_text: req.body.review_text,

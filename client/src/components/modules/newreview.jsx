@@ -5,7 +5,7 @@ import { RatingReview } from "./reviewstars";
 import "./newreview.css";
 
 const NewReview = (props) => {
-  const userName = useContext(UserContext).userName;
+  const { userId, userName } = useContext(UserContext);
   const [rating, setRating] = useState(0);
   const [value, setValue] = useState("");
 
@@ -25,6 +25,7 @@ const NewReview = (props) => {
   const addNewReview = (value) => {
     const review = {
       review_text: value,
+      poster_id: userId,
       poster_name: userName,
       parent_item: props.parent_item,
       timestamp: Date.now(),

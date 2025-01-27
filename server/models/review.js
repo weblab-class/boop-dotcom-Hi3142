@@ -6,7 +6,7 @@ const ReviewSchema = new mongoose.Schema({
   poster_name: String,
   parent_item: String, //links to ID of the menu item
   rating: Number,
-  timestamp: { type: Date, default: Date.now },
+  timestamp: { type: Date, default: Date.now() },
   review_text: String,
 });
 
