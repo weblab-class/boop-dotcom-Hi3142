@@ -51,7 +51,7 @@ router.get("/reviews", (req, res) => {
   });
 });
 
-router.post("/review", (req, res) => {
+router.post("/add-review", (req, res) => {
   const newReview = new Review({
     poster_name: req.body.poster_name,
     parent_item: req.body.parent_item,

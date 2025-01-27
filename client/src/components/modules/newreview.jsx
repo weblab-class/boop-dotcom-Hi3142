@@ -31,7 +31,7 @@ const NewReview = (props) => {
       rating: rating,
     };
 
-    post("/api/review", review).then((reviewObj) => {
+    post("/api/add-review", review).then((reviewObj) => {
       props.reviewUpdater(reviewObj);
       console.log(reviewObj.review_text, reviewObj.parent_item);
     });

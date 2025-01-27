@@ -171,10 +171,15 @@ const Search = () => {
   useEffect(() => {
     setMatchingItems(
       filteredItems.filter((item) =>
-        item.name
+        prefix
           .toLowerCase()
           .split(/(\s+)/)
-          .some((word) => word.startsWith(prefix.toLowerCase()))
+          .every((prefixWord) =>
+            item.name
+              .toLowerCase()
+              .split(/(\s+)/)
+              .some((word) => word.startsWith(prefixWord))
+          )
       )
     );
   }, [prefix, filteredItems]);
