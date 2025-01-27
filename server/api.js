@@ -62,6 +62,10 @@ router.post("/add-review", (req, res) => {
   newReview.save().then((rev) => res.send(rev));
 });
 
+router.post("/remove-review", (req, res) => {
+  Review.findOneAndDelete({ _id: req.body.review_id }).then((rev) => res.send(rev));
+});
+
 router.get("/menuitems", (req, res) => {
   MenuItem.find().then((items) => {
     res.send(items);

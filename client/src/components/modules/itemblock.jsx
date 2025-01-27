@@ -21,10 +21,6 @@ const ItemBlock = (props) => {
     });
   }, []);
 
-  const reviewUpdater = (reviewObj) => {
-    setReviews(reviews.concat([reviewObj]));
-  };
-
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleContent = () => {
@@ -47,7 +43,7 @@ const ItemBlock = (props) => {
         }}
         className="content"
       >
-        <ReviewBlock menuitem={props.menuitem} reviews={reviews} reviewUpdater={reviewUpdater} />
+        <ReviewBlock menuitem={props.menuitem} reviews={reviews} setReviews={setReviews} />
       </div>
     </div>
   );

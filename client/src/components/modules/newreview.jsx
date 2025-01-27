@@ -32,7 +32,7 @@ const NewReview = (props) => {
     };
 
     post("/api/add-review", review).then((reviewObj) => {
-      props.reviewUpdater(reviewObj);
+      props.addReview(reviewObj);
       console.log(reviewObj.review_text, reviewObj.parent_item);
     });
   };

@@ -15,7 +15,19 @@
   margin: 3px 0px;
 }
 
+.dateText {
+  color: var(--grey);
+  margin: 3px 0px;
+}
+
 .reviewText {
   color: var(--grey);
   margin: 3px 0px;
+}
+
+.removeReviewButton {
+  margin: 3px 0px;
+  float: right;
+  flex-grow: 1;
+  text-align: right;
 }
