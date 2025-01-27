@@ -1,8 +1,14 @@
-.reviewWrap1 {
-  padding: 0px 10px;
+.reviewWrap {
   display: flex;
-  gap: 5px;
+  text-align: justify;
+  margin-bottom: none;
+  align-items: center;
+}
+
+.outerReviewWrap {
+  padding: 0px 10px;
   margin: 3px 0px;
+  margin-bottom: 20px;
 }
 
 .userName {
@@ -15,13 +21,18 @@
   margin: 3px 0px;
 }
 
+.badrating {
+  color: var(--mid--magenta);
+  margin: 3px 0px;
+}
+
 .dateText {
-  color: var(--grey);
+  color: var(--mid--magenta);
   margin: 3px 0px;
 }
 
 .reviewText {
-  color: var(--grey);
+  color: var(--white);
   margin: 3px 0px;
 }
 

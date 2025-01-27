@@ -50,21 +50,22 @@ const Review = (props) => {
   console.log(timeAgo(Date.parse(props.reviewobj.timestamp)));
 
   return (
-    <div className="reviewWrap1">
-      <p className="userName">{props.reviewobj.poster_name}: </p>
-      {props.reviewobj.rating !== 1 ? (
-        <p className="rating"> {props.reviewobj.rating} stars</p>
-      ) : (
-        <p className="rating"> {props.reviewobj.rating} star</p>
-      )}
-      <p className="dateText"> | {timeAgo(Date.parse(props.reviewobj.timestamp))}</p>
-      <p className="reviewText"> | {props.reviewobj.review_text}</p>
-      {userId && userId === props.reviewobj.poster_id && (
-        <p className="removeReviewButton" onClick={props.removeThisReview}>
-          {" "}
-          🗑️ Delete my review
-        </p>
-      )}
+    <div className="outerReviewWrap">
+      <div className="reviewWrap">
+        <p className="userName">{props.reviewobj.poster_name} </p>
+        &ensp;
+        <p className="rating"> {"★".repeat(props.reviewobj.rating)} </p>
+        <p className="badrating"> {"★".repeat(5 - props.reviewobj.rating)} </p>
+        &ensp;
+        <p className="dateText">{timeAgo(Date.parse(props.reviewobj.timestamp))}</p>
+        {userId && userId === props.reviewobj.poster_id && (
+          <p className="removeReviewButton" onClick={props.removeThisReview}>
+            {" "}
+            🗑️ Delete my review
+          </p>
+        )}
+      </div>
+      <p className="reviewText">{props.reviewobj.review_text}</p>
     </div>
   );
 };
