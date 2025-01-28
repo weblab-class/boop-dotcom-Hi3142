@@ -18,7 +18,7 @@ const Menu = (props) => {
       <MenuSearchBar />
       <MenuOptionBar />
       {props.itemlist.length > 0 ? (
-        <div className="itemArray">
+        <div>
           {" "}
           {props.itemlist.map((menuitem) => (
             <ItemBlock menuitem={menuitem} key={`item_${menuitem._id}`} />

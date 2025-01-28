@@ -4,9 +4,5 @@
 .menuTitle {
   font-size: 60px;
   padding: 20px 0 10px 10px;
-}
-
-.itemArray {
-  display: grid;
-  row-gap: 5px;
+  font-weight: 500;
 }

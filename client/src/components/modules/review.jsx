@@ -51,17 +51,18 @@ const Review = (props) => {
 
   return (
     <div className="outerReviewWrap">
-      <div className="reviewWrap">
-        <p className="userName">{props.reviewobj.poster_name} </p>
-        &ensp;
+      <div className="allrating">
         <p className="rating"> {"★".repeat(props.reviewobj.rating)} </p>
         <p className="badrating"> {"★".repeat(5 - props.reviewobj.rating)} </p>
-        &ensp;
+      </div>
+      <div className="reviewWrap">
+        <p className="userName">{props.reviewobj.poster_name} </p>
+        &ensp; &ensp;
         <p className="dateText">{timeAgo(Date.parse(props.reviewobj.timestamp))}</p>
         {userId && userId === props.reviewobj.poster_id && (
           <p className="removeReviewButton" onClick={props.removeThisReview}>
             {" "}
-            🗑️ Delete my review
+            🗑️
           </p>
         )}
       </div>

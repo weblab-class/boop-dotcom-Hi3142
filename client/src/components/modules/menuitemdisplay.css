@@ -1,32 +1,37 @@
 .menuItemWrap {
-  display: flex;
-  justify-content: space-between;
-  padding: 1px 15px;
+  padding: 5px 10px 0px 20px;
   font-size: 16px;
   border-radius: 999px;
   background: linear-gradient(90deg, var(--dark--navy), var(--dark--magenta));
-
+  max-width: 100%;
   font-family: "Josefin Sans", serif;
   font-weight: 380;
   height: 50px;
   align-items: center;
+  white-space: nowrap;
 }
 
 .left-aligned {
-  gap: 20px;
   display: flex;
-  align-items: center;
+  font-weight: 300;
+  flex-grow: 1;
+  overflow: clip;
+  max-width: calc(100% - 90px);
+  gap: 5px;
 }
 
 .right-aligned {
-  gap: 20px;
   display: flex;
   align-items: center;
+  font-weight: 300;
+  max-width: fit-content;
+  gap: 5px;
 }
 
 .itemName {
-  font-weight: bold;
-  text-transform: "uppercase";
+  font-weight: 600;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
 }
 .active,
 .menuItemWrap:hover {

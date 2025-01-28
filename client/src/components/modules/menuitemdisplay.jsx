@@ -52,14 +52,14 @@ const MenuItemDisplay = (props) => {
     <div>
       <div className={`menuItemWrap ${props.isOpen ? "active" : ""}`}>
         <div className="left-aligned">
-          <p className="itemName">{props.menuitem.name}</p>
-          <p>
+          <div className="itemName">{props.menuitem.name}</div>
+          <div>
             | {props.menuitem.location} @ {props.menuitem.station}
-          </p>
+          </div>
         </div>
         <div className="right-aligned">
           {userId && (
-            <p>
+            <div>
               <Checkbox
                 label="♥︎"
                 value={checked}
@@ -68,9 +68,9 @@ const MenuItemDisplay = (props) => {
                   color: checked ? "#ffb800" : "#9115a7",
                 }}
               />
-            </p>
+            </div>
           )}
-          <p>★ {props.menuitem.avg_rating}</p>
+          <div>★ {props.menuitem.avg_rating}</div>
         </div>
       </div>
     </div>
