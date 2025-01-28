@@ -4,6 +4,7 @@ import ReviewBlock from "./reviewblock.jsx";
 import { get, post } from "../../utilities";
 import MenuItemDisplay from "./menuitemdisplay.jsx";
 import "./itemblock.css";
+import { socket } from "../../client-socket";
 
 /**
  * Card is a component for displaying content like stories
@@ -26,6 +27,12 @@ const ItemBlock = (props) => {
   const toggleContent = () => {
     setIsOpen((prevState) => !prevState); // Toggle the state between true and false
   };
+
+  socket.on("new_review", (rev) => {
+    if (rev.parent_item === this_parent_item) {
+      setReviews([...reviews, rev]);
+    }
+  });
 
   return (
     <div>

@@ -60,7 +60,9 @@ router.post("/add-review", (req, res) => {
     rating: req.body.rating,
     timestamp: req.body.timestamp,
   });
-  newReview.save().then((rev) => res.send(rev));
+  newReview.save().then((rev) => {
+    socketManager.getIo().emit("new_review", rev);
+  });
 });
 
 router.post("/remove-review", (req, res) => {
